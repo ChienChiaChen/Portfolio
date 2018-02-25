@@ -2,82 +2,72 @@ package com.chiachen.portfolio;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
-import android.os.Handler;
-import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class ProgressButtonActivity extends AppCompatActivity {
+import presenter.IProgressButtonPresenter;
+import presenter.ProgressPresenter;
+import view.IProgressButtonView;
+
+public class ProgressButtonActivity extends AppCompatActivity implements IProgressButtonView {
 
     public final String TAG = this.getClass().getSimpleName();
-
-    private static final int STATUS_INIT = 0;
     private static final int ANIMATION_TIME = 2500;
-    private ProgressBar mActionButtonProgress;
-    private TextView mActionButtonText;
-    private View mActionButton;
-    private Handler mHandler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case STATUS_INIT:
-                    resetUI();
-            }
-        }
-    };
+    private IProgressButtonPresenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress_button);
-        initUI();
+        mPresenter = new ProgressPresenter(this);
+        mPresenter.init();
     }
 
-    public void initUI(){
-        mActionButtonText = (TextView) findViewById(R.id.action_button_text);
-        mActionButton = findViewById(R.id.action_button);
-        mActionButtonProgress = (ProgressBar) findViewById(R.id.action_button_progress);
-        resetUI();
+    @Override
+    public void init() {
+        getTextView().setText(R.string.progress_button_download);
+        getButton().setSelected(false);
+        getButton().setEnabled(true);
+        setButtonClickListener(onClickListener, getButton());
     }
 
-    private void resetUI(){
-        if (mActionButtonText == null || mActionButton == null || mActionButtonProgress == null)
-            return;
-
-        mActionButtonText.setText("Download");
-        mActionButton.setSelected(false);
-        mActionButton.setEnabled(true);
-        setButtonClickListener(onClickListener, mActionButton);
+    private View getButton() {
+        return findViewById(R.id.action_button);
     }
 
-    private void handleDownloading() {
-        mActionButtonProgress.setProgress(0);
-        mActionButtonProgress.setVisibility(View.VISIBLE);
-        mActionButtonText.setText("Downloading");
-        android.widget.Toast.makeText(ProgressButtonActivity.this, "Downloading", Toast.LENGTH_SHORT).show();
+    private TextView getTextView() {
+        return (TextView) findViewById(R.id.action_button_text);
+    }
+
+    @Override
+    public void handleDownloading() {
+        getProgressBar().setProgress(0);
+        getProgressBar().setVisibility(View.VISIBLE);
+        getTextView().setText(R.string.progress_button_downloading);
         updateButtonProgress(100);
     }
 
-    private void handleDownloadEnd() {
-        mActionButtonText.setText("Downloaded");
-        mActionButton.setSelected(true);
-        mActionButton.setEnabled(false);
-        mActionButtonProgress.setVisibility(View.GONE);
-        android.widget.Toast.makeText(ProgressButtonActivity.this, "Downloaded", Toast.LENGTH_SHORT).show();
-        mHandler.sendEmptyMessageDelayed(STATUS_INIT, ANIMATION_TIME);
+    private ProgressBar getProgressBar() {
+        return (ProgressBar) findViewById(R.id.action_button_progress);
+    }
+
+    @Override
+    public void handleDownloadEnd() {
+        getTextView().setText(R.string.progress_button_downloaded);
+        getButton().setSelected(true);
+        getButton().setEnabled(false);
+        getProgressBar().setVisibility(View.GONE);
     }
 
     private void updateButtonProgress(int progressTo){
         ObjectAnimator animation = ObjectAnimator.ofInt(
-                mActionButtonProgress,
+                getProgressBar(),
                 "progress",
-                mActionButtonProgress.getProgress(),
+                getProgressBar().getProgress(),
                 progressTo);
 
         animation.setDuration(ANIMATION_TIME);
@@ -90,9 +80,8 @@ public class ProgressButtonActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animator animation) {
-                if (100 == mActionButtonProgress.getProgress()) {
-                    handleDownloadEnd();
-                    Log.e(TAG, "Downloaded");
+                if (100 == getProgressBar().getProgress()) {
+                    mPresenter.handleDownloadEnd();
                 }
             }
 
@@ -121,7 +110,7 @@ public class ProgressButtonActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.action_button: {
-                    handleDownloading();
+                    mPresenter.handleDownloading();
                     break;
                 }
             }

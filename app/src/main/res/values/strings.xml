@@ -2,4 +2,8 @@
     <string name="app_name">Portfolio</string>
 
     <string name="progress_btn">Progress Button</string>
+
+    <string name="progress_button_download">Download</string>
+    <string name="progress_button_downloading">Downloading</string>
+    <string name="progress_button_downloaded">Downloaded</string>
 </resources>
