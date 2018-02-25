@@ -18,7 +18,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="startOperatorsActivity"
+            android:onClick="startProgressButtonActivity"
             android:text="@string/progress_btn"
             android:textAllCaps="false"
             android:textColor="@android:color/black" />
