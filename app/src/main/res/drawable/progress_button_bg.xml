@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_pressed="true" android:state_selected="true">
+		<shape>
+			<solid android:color="@color/status_change_pressed" />
+			<corners android:radius="5dp"/>
+		</shape>
+	</item>
+
+	<item android:state_pressed="true">
+		<shape>
+			<solid android:color="@color/main_style_color_pressed" />
+			<corners android:radius="5dp"/>
+		</shape>
+	</item>
+
+	<item android:state_selected="true">
+		<shape>
+			<solid android:color="@color/status_change" />
+			<corners android:radius="5dp"/>
+		</shape>
+	</item>
+
+	<item>
+		<shape>
+			<solid android:color="@color/main_style_color" />
+			<corners android:radius="5dp"/>
+		</shape>
+	</item>
+</selector>
