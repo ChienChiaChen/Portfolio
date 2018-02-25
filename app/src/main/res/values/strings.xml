@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Portfolio</string>
+
+    <string name="progress_btn">Progress Button</string>
 </resources>
