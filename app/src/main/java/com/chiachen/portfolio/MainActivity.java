@@ -16,4 +16,8 @@ public class MainActivity extends AppCompatActivity {
     public void startProgressButtonActivity(View view) {
         startActivity(new Intent(MainActivity.this, ProgressButtonActivity.class));
     }
+
+    public void openKeyboardActivity(View view) {
+        startActivity(new Intent(MainActivity.this, EditTextActivity.class));
+    }
 }

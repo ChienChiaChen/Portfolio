@@ -19,13 +19,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startProgressButtonActivity"
-            android:text="@string/progress_btn"
+            android:text="@string/progress_button"
             android:textAllCaps="false"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="openKeyboardActivity"
+            android:text="@string/edit_text_button"
             android:textAllCaps="false"
             android:textColor="@android:color/black" />
 
