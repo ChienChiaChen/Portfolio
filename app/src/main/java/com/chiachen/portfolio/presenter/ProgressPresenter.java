@@ -1,6 +1,6 @@
-package presenter;
+package com.chiachen.portfolio.presenter;
 
-import view.IProgressButtonView;
+import com.chiachen.portfolio.view.IProgressButtonView;
 
 /**
  * Created by jianjiacheng on 25/02/2018.

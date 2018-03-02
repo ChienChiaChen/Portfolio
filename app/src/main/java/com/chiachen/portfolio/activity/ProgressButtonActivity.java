@@ -1,4 +1,4 @@
-package com.chiachen.portfolio;
+package com.chiachen.portfolio.activity;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
@@ -9,9 +9,11 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import presenter.IProgressButtonPresenter;
-import presenter.ProgressPresenter;
-import view.IProgressButtonView;
+import com.chiachen.portfolio.R;
+import com.chiachen.portfolio.presenter.IProgressButtonPresenter;
+import com.chiachen.portfolio.presenter.ProgressPresenter;
+import com.chiachen.portfolio.view.IProgressButtonView;
+
 
 public class ProgressButtonActivity extends AppCompatActivity implements IProgressButtonView {
 

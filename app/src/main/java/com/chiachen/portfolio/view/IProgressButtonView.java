@@ -1,10 +1,10 @@
-package presenter;
+package com.chiachen.portfolio.view;
 
 /**
  * Created by jianjiacheng on 25/02/2018.
  */
 
-public interface IProgressButtonPresenter {
+public interface IProgressButtonView {
     void init();
 
     void handleDownloading();
