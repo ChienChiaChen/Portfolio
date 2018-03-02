@@ -8,4 +8,12 @@
     <string name="edit_text_button">Edit Text</string>
     <string name="login">Login</string>
 
+    <!---->
+    <string name="tab_title_first">Home</string>
+    <string name="tab_title_two">Diary</string>
+    <string name="tab_title_dna_report">DNA Report</string>
+    <string name="tab_title_my_coach">My Coach</string>
+    <string name="tab_title_more">More</string>
+    <string name="bottom_tab">Bottom Tab</string>
+    <!---->
 </resources>

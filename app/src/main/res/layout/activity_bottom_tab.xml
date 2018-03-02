@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+    </FrameLayout>
+
+    <View
+        android:id="@+id/bottom_border_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/bottom_navigation"
+        android:background="@android:color/darker_gray">
+    </View>
+
+    <ImageView
+        android:id="@+id/bottom_tab_camera"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_above="@id/bottom_border_line"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/tab_camera">
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/bottom_tab_diary"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/bottom_tab_diary_icon"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/bottom_bar_diary"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+            </ImageView>
+            <TextView
+                android:id="@+id/bottom_title_diary"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/bottom_tab_diary_icon"
+                android:layout_centerInParent="true"
+                android:text="@string/tab_title_two"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/bottom_title_color"
+                android:gravity="center">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom_tab_report"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/bottom_tab_report_icon"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/bottom_bar_report"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+            </ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/bottom_tab_report_icon"
+                android:layout_centerInParent="true"
+                android:text="@string/tab_title_dna_report"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/bottom_title_color"
+                android:gravity="center">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/bottom_tab_coach"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/bottom_tab_coach_icon"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/bottom_bar_coach"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+            </ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/bottom_tab_coach_icon"
+                android:layout_centerInParent="true"
+                android:text="@string/tab_title_my_coach"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/bottom_title_color"
+                android:gravity="center">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom_tab_more"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/bottom_tab_more_icon"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:src="@drawable/bottom_bar_more"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+            </ImageView>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/bottom_tab_more_icon"
+                android:layout_centerInParent="true"
+                android:text="@string/tab_title_more"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/bottom_title_color"
+                android:gravity="center">
+            </TextView>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

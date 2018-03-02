@@ -20,9 +20,13 @@
         <activity android:name=".ProgressButtonActivity">
         </activity>
 
-        <activity android:name=".EditTextActivity"
-                  android:theme="@style/AppTheme.NoActionBar"
-                  android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+        <activity
+            android:name=".EditTextActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+        </activity>
+
+        <activity android:name=".BottomTabActivity">
         </activity>
     </application>
 

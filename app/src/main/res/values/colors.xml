@@ -4,8 +4,12 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <!---->
     <color name="main_style_color">#0d093c</color>
     <color name="main_style_color_pressed">#800d093c</color>
     <color name="status_change">#56c871</color>
     <color name="status_change_pressed">#8056c871</color>
+    <!---->
+
+    <color name="light_blue">#287CBC</color>
 </resources>

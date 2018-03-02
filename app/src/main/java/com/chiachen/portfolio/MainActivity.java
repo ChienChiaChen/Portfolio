@@ -20,4 +20,8 @@ public class MainActivity extends AppCompatActivity {
     public void openKeyboardActivity(View view) {
         startActivity(new Intent(MainActivity.this, EditTextActivity.class));
     }
+
+    public void openBottomTabActivity(View view) {
+        startActivity(new Intent(MainActivity.this, BottomTabActivity.class));
+    }
 }
