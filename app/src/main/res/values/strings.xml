@@ -16,4 +16,11 @@
     <string name="tab_title_more">More</string>
     <string name="bottom_tab">Bottom Tab</string>
     <!---->
+
+    <!---->
+    <string name="fragment_1">Fragment 1</string>
+    <string name="fragment_2">Fragment 2</string>
+    <string name="fragment_3">Fragment 3</string>
+    <string name="fragment_4">Fragment 4</string>
+    <!---->
 </resources>

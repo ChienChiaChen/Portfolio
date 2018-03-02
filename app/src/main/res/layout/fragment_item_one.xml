@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/fragment_1"
+        android:textSize="30sp"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_child_tag"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/text_1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tab1"
+            android:text="2"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp">
+        </Button>
+
+        <Button
+            android:id="@+id/tab2"
+            android:text="3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp">
+        </Button>
+
+        <Button
+            android:id="@+id/tab3"
+            android:text="4"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp">
+        </Button>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/child_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_child_tag">
+    </FrameLayout>
+
+</RelativeLayout>
