@@ -68,6 +68,16 @@ public class BottomTabActivity extends AppCompatActivity implements IBottomView 
     };
 
     @Override
+    public void showLoading() {
+
+    }
+
+    @Override
+    public void hideLoading() {
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPresenter = new BottomPresenter(this);
@@ -84,7 +94,6 @@ public class BottomTabActivity extends AppCompatActivity implements IBottomView 
         getCoach().setOnClickListener(mOnTabClickListener);
         getMore().setOnClickListener(mOnTabClickListener);
         fm = getSupportFragmentManager();
-        // setDefaultFragment();
         switchContent(null, ItemFragmentOne.newInstance(), ItemFragmentOne.TAG);
     }
 
