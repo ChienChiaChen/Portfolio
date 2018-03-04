@@ -23,7 +23,7 @@ public class PresenterManager {
         mPresenterCache = CacheBuilder.newBuilder().expireAfterWrite(expirationValue, expirationUnit).maximumSize(maxSize).build();
     }
 
-    public PresenterManager getInstance() {
+    public static PresenterManager getInstance() {
         if (null == sManager) {
             sManager = new PresenterManager(10, 30, TimeUnit.SECONDS);
         }

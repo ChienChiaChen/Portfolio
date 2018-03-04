@@ -26,4 +26,8 @@ public class MainActivity extends AppCompatActivity {
     public void openBottomTabActivity(View view) {
         startActivity(new Intent(MainActivity.this, BottomTabActivity.class));
     }
+
+    public void openMVPActivity(View view) {
+        startActivity(new Intent(MainActivity.this, MVPPracticeActivity.class));
+    }
 }

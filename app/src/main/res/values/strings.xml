@@ -23,4 +23,6 @@
     <string name="fragment_3">Fragment 3</string>
     <string name="fragment_4">Fragment 4</string>
     <!---->
+
+    <string name="mvp_practice">MVP Practice</string>
 </resources>

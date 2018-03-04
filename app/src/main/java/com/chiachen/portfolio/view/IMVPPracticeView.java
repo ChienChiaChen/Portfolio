@@ -6,4 +6,5 @@ package com.chiachen.portfolio.view;
 
 public interface IMVPPracticeView extends IBaseView {
 
+    void showEmpty();
 }
