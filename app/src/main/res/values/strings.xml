@@ -24,5 +24,10 @@
     <string name="fragment_4">Fragment 4</string>
     <!---->
 
+    <!---->
     <string name="mvp_practice">MVP Practice</string>
+    <string name="loading">Loading…</string>
+    <string name="empty">You don\'t have counters yet :(</string>
+    <string name="add_counter">Add Counter</string>
+    <!---->
 </resources>
