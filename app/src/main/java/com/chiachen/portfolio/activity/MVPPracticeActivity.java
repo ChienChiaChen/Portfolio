@@ -1,6 +1,8 @@
 package com.chiachen.portfolio.activity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.ViewAnimator;
 
 import com.chiachen.portfolio.R;
@@ -9,6 +11,7 @@ import com.chiachen.portfolio.presenter.PresenterManager;
 import com.chiachen.portfolio.view.IMVPPracticeView;
 
 public class MVPPracticeActivity extends BaseActivity implements IMVPPracticeView {
+    private static final int POSITION_LIST = 0;
     private static final int POSITION_LOADING = 1;
     private static final int POSITION_EMPTY = 2;
 
@@ -30,6 +33,13 @@ public class MVPPracticeActivity extends BaseActivity implements IMVPPracticeVie
     public void init() {
         setContentView(R.layout.activity_mvp_practice);
         animator = findViewById(R.id.animator);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
     }
 
     @Override
