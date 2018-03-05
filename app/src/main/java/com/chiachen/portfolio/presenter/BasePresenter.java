@@ -2,15 +2,13 @@ package com.chiachen.portfolio.presenter;
 
 import android.support.annotation.NonNull;
 
-import com.chiachen.portfolio.view.IBaseView;
-
 import java.lang.ref.WeakReference;
 
 /**
  * Created by jianjiacheng on 04/03/2018.
  */
 
-public abstract class BasePresenter<M, V extends IBaseView> {
+public abstract class BasePresenter<M, V> {
     protected M model;
     private WeakReference<V> view;
 

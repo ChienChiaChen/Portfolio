@@ -1,12 +1,15 @@
 package com.chiachen.portfolio.activity;
 
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ViewAnimator;
 
 import com.chiachen.portfolio.R;
+import com.chiachen.portfolio.adapter.CounterAdapter;
 import com.chiachen.portfolio.models.Counter;
 import com.chiachen.portfolio.presenter.MVPPracticePresenter;
 import com.chiachen.portfolio.presenter.PresenterManager;
@@ -21,6 +24,7 @@ public class MVPPracticeActivity extends BaseActivity implements IMVPPracticeVie
 
     private MVPPracticePresenter mPresenter;
     private ViewAnimator animator;
+    private CounterAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,12 @@ public class MVPPracticeActivity extends BaseActivity implements IMVPPracticeVie
 
         setContentView(R.layout.activity_mvp_practice);
         animator = findViewById(R.id.animator);
+        adapter = new CounterAdapter();
+
+        RecyclerView recyclerView = (RecyclerView) animator.getChildAt(POSITION_LIST);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        recyclerView.setAdapter(adapter);
     }
 
     @Override
@@ -86,7 +96,8 @@ public class MVPPracticeActivity extends BaseActivity implements IMVPPracticeVie
     }
 
     @Override
-    public void showCounters(List<Counter> model) {
+    public void showCounters(List<Counter> counters) {
+        adapter.clearAndAddAll(counters);
         animator.setDisplayedChild(POSITION_LIST);
     }
 }

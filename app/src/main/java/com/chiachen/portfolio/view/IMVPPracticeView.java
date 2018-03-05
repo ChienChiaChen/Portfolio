@@ -12,5 +12,5 @@ public interface IMVPPracticeView extends IBaseView {
 
     void showEmpty();
 
-    void showCounters(List<Counter> model);
+    void showCounters(List<Counter> counters);
 }
