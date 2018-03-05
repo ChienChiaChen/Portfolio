@@ -5,7 +5,6 @@ package com.chiachen.portfolio.view;
  */
 
 public interface IBaseView {
-    void init();
     void showLoading();
     void hideLoading();
 }

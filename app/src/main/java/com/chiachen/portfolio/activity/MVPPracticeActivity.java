@@ -3,12 +3,16 @@ package com.chiachen.portfolio.activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ViewAnimator;
 
 import com.chiachen.portfolio.R;
+import com.chiachen.portfolio.models.Counter;
 import com.chiachen.portfolio.presenter.MVPPracticePresenter;
 import com.chiachen.portfolio.presenter.PresenterManager;
 import com.chiachen.portfolio.view.IMVPPracticeView;
+
+import java.util.List;
 
 public class MVPPracticeActivity extends BaseActivity implements IMVPPracticeView {
     private static final int POSITION_LIST = 0;
@@ -23,14 +27,11 @@ public class MVPPracticeActivity extends BaseActivity implements IMVPPracticeVie
         super.onCreate(savedInstanceState);
 
         if (null == savedInstanceState) {
-            mPresenter = new MVPPracticePresenter(this);
+            mPresenter = new MVPPracticePresenter();
         } else {
             mPresenter = PresenterManager.getInstance().restorePresenter(savedInstanceState);
         }
-    }
 
-    @Override
-    public void init() {
         setContentView(R.layout.activity_mvp_practice);
         animator = findViewById(R.id.animator);
     }
@@ -43,9 +44,23 @@ public class MVPPracticeActivity extends BaseActivity implements IMVPPracticeVie
     }
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.add_counter: {
+                mPresenter.onAddCounterClicked();
+                return true;
+            }
+
+            default: {
+                return super.onOptionsItemSelected(item);
+            }
+        }
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
-        mPresenter.syncView();
+        mPresenter.bindView(this);
     }
 
     @Override
@@ -68,5 +83,10 @@ public class MVPPracticeActivity extends BaseActivity implements IMVPPracticeVie
     @Override
     public void showEmpty() {
         animator.setDisplayedChild(POSITION_EMPTY);
+    }
+
+    @Override
+    public void showCounters(List<Counter> model) {
+        animator.setDisplayedChild(POSITION_LIST);
     }
 }

@@ -1,5 +1,7 @@
 package com.chiachen.portfolio.models;
 
+import android.support.annotation.NonNull;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,6 +28,14 @@ public class CounterDatabase {
     public List<Counter> getAllCounters() {
         synchronized (counters) {
             return new ArrayList<>(counters.values());
+        }
+    }
+
+    public void saveCounter(@NonNull Counter counter) {
+        synchronized (counters) {
+            int id = nextId++;
+            counter.setId(id);
+            counters.put(id, counter);
         }
     }
 }

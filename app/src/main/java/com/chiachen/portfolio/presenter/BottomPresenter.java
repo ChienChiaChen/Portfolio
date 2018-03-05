@@ -16,11 +16,6 @@ public class BottomPresenter implements IBottomPresenter {
     }
 
     @Override
-    public void init() {
-        mView.init();
-    }
-
-    @Override
     public void clearTabStatus() {
         mView.clearTabStatus();
     }

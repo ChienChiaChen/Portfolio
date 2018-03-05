@@ -81,13 +81,8 @@ public class BottomTabActivity extends AppCompatActivity implements IBottomView 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPresenter = new BottomPresenter(this);
-        mPresenter.init();
-    }
 
-    @Override
-    public void init() {
         setContentView(R.layout.activity_bottom_tab);
-
         getDiary().setOnClickListener(mOnTabClickListener);
         getReport().setOnClickListener(mOnTabClickListener);
         getCamera().setOnClickListener(mOnTabClickListener);

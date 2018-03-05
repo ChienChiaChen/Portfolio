@@ -5,5 +5,4 @@ package com.chiachen.portfolio.presenter;
  */
 
 public interface IBasePresenter {
-    void init();
 }

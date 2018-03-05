@@ -1,5 +1,7 @@
 package com.chiachen.portfolio.presenter;
 
+import android.support.annotation.NonNull;
+
 import com.chiachen.portfolio.view.IBaseView;
 
 import java.lang.ref.WeakReference;
@@ -14,12 +16,9 @@ public abstract class BasePresenter<M, V extends IBaseView> {
 
     protected abstract void updateView();
 
-    public BasePresenter(V view) {
+    public void bindView(@NonNull V view) {
         this.view = new WeakReference<>(view);
-        getView().init();
-    }
 
-    public void syncView() {
         if (setupDone()) {
             updateView();
         }
@@ -36,7 +35,7 @@ public abstract class BasePresenter<M, V extends IBaseView> {
         }
     }
 
-    private boolean setupDone() {
+    protected boolean setupDone() {
         return null != getView() && null != model;
     }
 

@@ -2,6 +2,7 @@ package com.chiachen.portfolio.presenter;
 
 import android.os.AsyncTask;
 import android.os.SystemClock;
+import android.support.annotation.NonNull;
 
 import com.chiachen.portfolio.models.Counter;
 import com.chiachen.portfolio.models.CounterDatabase;
@@ -16,13 +17,9 @@ import java.util.List;
 public class MVPPracticePresenter extends BasePresenter<List<Counter>, IMVPPracticeView> {
     private boolean isLoadingData = false;
 
-    public MVPPracticePresenter(IMVPPracticeView view) {
-        super(view);
-    }
-
     @Override
-    public void syncView() {
-        super.syncView();
+    public void bindView(@NonNull IMVPPracticeView view) {
+        super.bindView(view);
 
         if (null == model && !isLoadingData) {
             getView().showLoading();
@@ -32,12 +29,29 @@ public class MVPPracticePresenter extends BasePresenter<List<Counter>, IMVPPract
 
     @Override
     protected void updateView() {
-        this.getView().showEmpty();
+
+        // Logic is in the presenter.
+        if (0 == model.size()) {
+            this.getView().showEmpty();
+        } else {
+            this.getView().showCounters(model);
+        }
     }
 
     private void loadData() {
         isLoadingData = true;
         new LoadDataTask().execute();
+    }
+
+    public void onAddCounterClicked() {
+        Counter counter = new Counter();
+        counter.setName("New one");
+        counter.setValue(0);
+
+        // update view immediately
+        model.add(counter);
+        CounterDatabase.getInstance().saveCounter(counter);
+        updateView();
     }
 
     private class LoadDataTask extends AsyncTask<Void, Void, Void> {
