@@ -29,5 +29,6 @@
     <string name="loading">Loading…</string>
     <string name="empty">You don\'t have counters yet :(</string>
     <string name="add_counter">Add Counter</string>
+    <string name="rxjava_retrofit_1">RxJava Retrofit 1</string>
     <!---->
 </resources>

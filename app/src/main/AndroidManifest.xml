@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.chiachen.portfolio">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,20 +18,18 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity android:name=".activity.ProgressButtonActivity">
         </activity>
-
         <activity
             android:name=".activity.EditTextActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
         </activity>
-
         <activity android:name=".activity.BottomTabActivity">
         </activity>
-
         <activity android:name=".activity.MVPPracticeActivity">
+        </activity>
+        <activity android:name=".activity.RxJavaRetrofitActivity">
         </activity>
     </application>
 

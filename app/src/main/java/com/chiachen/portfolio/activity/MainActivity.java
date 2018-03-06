@@ -30,4 +30,8 @@ public class MainActivity extends AppCompatActivity {
     public void openMVPActivity(View view) {
         startActivity(new Intent(MainActivity.this, MVPPracticeActivity.class));
     }
+
+    public void openRxJavaRetrofit(View view) {
+        startActivity(new Intent(MainActivity.this, RxJavaRetrofitActivity.class));
+    }
 }
