@@ -12,14 +12,13 @@ import com.chiachen.portfolio.view.CounterView;
 
 public class CounterViewHolder extends MvpViewHolder<CounterPresenter> implements CounterView {
     private final TextView counterName;
-    private final TextView counterValue;
+
     @Nullable
     private OnCounterClickListener listener;
 
     public CounterViewHolder(View itemView) {
         super(itemView);
         counterName = (TextView) itemView.findViewById(R.id.counter_name);
-        counterValue = (TextView) itemView.findViewById(R.id.counter_value);
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,11 +34,6 @@ public class CounterViewHolder extends MvpViewHolder<CounterPresenter> implement
     @Override
     public void setCounterName(String name) {
         counterName.setText(name);
-    }
-
-    @Override
-    public void setCounterValue(int value) {
-        counterValue.setText(String.valueOf(value));
     }
 
     @Override

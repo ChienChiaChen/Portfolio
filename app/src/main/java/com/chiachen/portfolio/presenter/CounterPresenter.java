@@ -10,7 +10,6 @@ public class CounterPresenter extends BasePresenter<Counter, CounterView> {
     @Override
     protected void updateView() {
         getView().setCounterName(model.getName());
-        getView().setCounterValue(model.getValue());
     }
 
     public void onCounterClicked() {

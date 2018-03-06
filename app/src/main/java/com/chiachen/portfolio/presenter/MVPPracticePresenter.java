@@ -46,7 +46,6 @@ public class MVPPracticePresenter extends BasePresenter<List<Counter>, IMVPPract
     public void onAddCounterClicked() {
         Counter counter = new Counter();
         counter.setName("New one");
-        counter.setValue(0);
 
         // update view immediately
         model.add(counter);
@@ -57,7 +56,7 @@ public class MVPPracticePresenter extends BasePresenter<List<Counter>, IMVPPract
     private class LoadDataTask extends AsyncTask<Void, Void, Void> {
         @Override
         protected Void doInBackground(Void... params) {
-            SystemClock.sleep(3000);
+            SystemClock.sleep(500);
             return null;
         }
 
