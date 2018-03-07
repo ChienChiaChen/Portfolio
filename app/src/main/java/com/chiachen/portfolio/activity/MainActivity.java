@@ -34,4 +34,8 @@ public class MainActivity extends AppCompatActivity {
     public void openRxJavaRetrofit(View view) {
         startActivity(new Intent(MainActivity.this, RxJavaRetrofitActivity.class));
     }
+
+    public void openRoundImageView(View view) {
+        startActivity(new Intent(MainActivity.this, CustomImageActivity.class));
+    }
 }

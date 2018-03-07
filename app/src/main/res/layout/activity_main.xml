@@ -55,5 +55,13 @@
             android:textAllCaps="false"
             android:textColor="@android:color/black" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openRoundImageView"
+            android:text="@string/round_image_view"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black" />
+
     </LinearLayout>
 </ScrollView>
