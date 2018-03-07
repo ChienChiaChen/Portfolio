@@ -45,6 +45,6 @@ public class RxJavaRetrofitActivity extends AppCompatActivity {
 
     public void getMovie() {
         HttpMethods.getInstance()
-                .getTopMovie(0,10, new ProgressSubscriber<List<Subject>>(mOnNextListener,RxJavaRetrofitActivity.this));
+                .getTopMovie(0,10, new ProgressSubscriber<List<Subject>>(RxJavaRetrofitActivity.this,mOnNextListener));
     }
 }

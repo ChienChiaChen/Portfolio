@@ -1,26 +1,52 @@
 package com.chiachen.portfolio.network.subscribers;
 
 import android.content.Context;
-import android.widget.Toast;
 
 import com.chiachen.portfolio.utils.progress.ProgressCancelListener;
 import com.chiachen.portfolio.utils.progress.ProgressDialogHandler;
 
-import rx.Subscriber;
+import io.reactivex.observers.ResourceObserver;
 
 /**
  * Created by jianjiacheng on 07/03/2018.
  */
 
-public class ProgressSubscriber<T> extends Subscriber<T> implements ProgressCancelListener {
-    private SubscriberOnNextListener mSubscriberOnNextListener;
+public class ProgressSubscriber<T> extends ResourceObserver<T> implements ProgressCancelListener{
+    private SubscriberOnNextListener mNextListener;
     private Context mContext;
     private ProgressDialogHandler mProgressDialogHandler;
 
-    public ProgressSubscriber(SubscriberOnNextListener subscriberOnNextListener, Context context) {
-        mSubscriberOnNextListener = subscriberOnNextListener;
+    public ProgressSubscriber(Context context, SubscriberOnNextListener nextListener) {
         mContext = context;
+        mNextListener = nextListener;
         mProgressDialogHandler = new ProgressDialogHandler(context, this, true);
+    }
+
+    @Override
+    protected void onStart() {
+        showProgressDialog();
+    }
+
+    @Override
+    public void onNext(T t) {
+        mNextListener.onNext(t);
+    }
+
+    @Override
+    public void onError(Throwable t) {
+        dismissProgressDialog();
+    }
+
+    @Override
+    public void onComplete() {
+        dismissProgressDialog();
+    }
+
+    @Override
+    public void onCancelProgress() {
+        if (!this.isDisposed()) {
+            this.dispose();
+        }
     }
 
     private void showProgressDialog() {
@@ -33,36 +59,6 @@ public class ProgressSubscriber<T> extends Subscriber<T> implements ProgressCanc
         if (null != mProgressDialogHandler) {
             mProgressDialogHandler.obtainMessage(ProgressDialogHandler.DISMISS_PROGRESS_DIALOG).sendToTarget();
             mProgressDialogHandler = null;
-        }
-    }
-
-
-    @Override
-    public void onStart() {
-        showProgressDialog();
-    }
-
-    @Override
-    public void onNext(T t) {
-        mSubscriberOnNextListener.onNext(t);
-    }
-
-    @Override
-    public void onCompleted() {
-        dismissProgressDialog();
-        Toast.makeText(mContext, "Get Top Movie Completed", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onError(Throwable e) {
-        dismissProgressDialog();
-        Toast.makeText(mContext, "error:" + e.getMessage(), Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onCancelProgress() {
-        if (!this.isUnsubscribed()) {
-            this.unsubscribe();
         }
     }
 }

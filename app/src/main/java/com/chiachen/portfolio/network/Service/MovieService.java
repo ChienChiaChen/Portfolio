@@ -4,8 +4,8 @@ import com.chiachen.portfolio.network.Service.entity.HttpResult;
 import com.chiachen.portfolio.network.Service.entity.Subject;
 
 import java.util.List;
-import rx.Observable;
 
+import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 

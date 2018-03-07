@@ -29,10 +29,11 @@ dependencies {
     compile 'com.google.guava:guava:18.0'
     compile 'com.android.support:recyclerview-v7:26.1.0'
 
-    compile 'io.reactivex:rxjava:1.1.0'
-    compile 'io.reactivex:rxandroid:1.1.0'
-    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
-    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
-    compile 'com.google.code.gson:gson:2.6.2'
+    //Network
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.7'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    compile 'com.google.code.gson:gson:2.8.2'
 }
