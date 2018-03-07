@@ -33,6 +33,8 @@
         </activity>
         <activity android:name=".activity.CustomImageActivity">
         </activity>
+        <activity android:name=".activity.FlipCardActivity">
+        </activity>
     </application>
 
 </manifest>

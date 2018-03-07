@@ -38,4 +38,8 @@ public class MainActivity extends AppCompatActivity {
     public void openRoundImageView(View view) {
         startActivity(new Intent(MainActivity.this, CustomImageActivity.class));
     }
+
+    public void openFlipCardActivity(View view) {
+        startActivity(new Intent(MainActivity.this, FlipCardActivity.class));
+    }
 }

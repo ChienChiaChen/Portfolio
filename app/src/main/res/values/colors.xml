@@ -12,4 +12,8 @@
     <!---->
 
     <color name="light_blue">#287CBC</color>
+
+    <color name="cardFront">#434850</color>
+    <color name="cardBack">#bc4c4a</color>
+
 </resources>
