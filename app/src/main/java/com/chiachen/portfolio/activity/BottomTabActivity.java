@@ -18,7 +18,7 @@ import com.chiachen.portfolio.view.IBottomView;
 
 public class BottomTabActivity extends AppCompatActivity implements IBottomView {
     private IBottomPresenter mPresenter;
-    private FragmentManager fm;
+    private FragmentManager mFragmentManager;
     private Fragment mFragmentNow;
 
     private View.OnClickListener mOnTabClickListener = new View.OnClickListener() {
@@ -63,7 +63,8 @@ public class BottomTabActivity extends AppCompatActivity implements IBottomView 
 
         @NonNull
         private Fragment getSelectedFragment(String tag, Fragment fragment) {
-            return (null != fm.findFragmentByTag(tag)) ? fm.findFragmentByTag(tag) : fragment;
+            Fragment fragmentFromTag = mFragmentManager.findFragmentByTag(tag);
+            return (null != fragmentFromTag) ? fragmentFromTag: fragment;
         }
     };
 
@@ -88,7 +89,7 @@ public class BottomTabActivity extends AppCompatActivity implements IBottomView 
         getCamera().setOnClickListener(mOnTabClickListener);
         getCoach().setOnClickListener(mOnTabClickListener);
         getMore().setOnClickListener(mOnTabClickListener);
-        fm = getSupportFragmentManager();
+        mFragmentManager = getSupportFragmentManager();
         switchContent(null, ItemFragmentOne.newInstance(), ItemFragmentOne.TAG);
     }
 
@@ -107,11 +108,11 @@ public class BottomTabActivity extends AppCompatActivity implements IBottomView 
 
         mFragmentNow = to;
         if (!to.isAdded() && null == from) {
-            fm.beginTransaction().add(R.id.frame_layout, to, tag).commit();
+            mFragmentManager.beginTransaction().add(R.id.frame_layout, to, tag).commit();
         } else if (!to.isAdded() && null != from) { // Hide current fragment and Add new fragment
-            fm.beginTransaction().hide(from).add(R.id.frame_layout, to, tag).commit();
+            mFragmentManager.beginTransaction().hide(from).add(R.id.frame_layout, to, tag).commit();
         } else { // Hide current fragment and Show it.
-            fm.beginTransaction().hide(from).show(to).commit();
+            mFragmentManager.beginTransaction().hide(from).show(to).commit();
         }
     }
 
