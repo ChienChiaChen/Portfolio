@@ -90,6 +90,8 @@ public class BottomTabActivity extends AppCompatActivity implements IBottomView 
         getCoach().setOnClickListener(mOnTabClickListener);
         getMore().setOnClickListener(mOnTabClickListener);
         mFragmentManager = getSupportFragmentManager();
+
+        getDiary().setSelected(true);
         switchContent(null, ItemFragmentOne.newInstance(), ItemFragmentOne.TAG);
     }
 
