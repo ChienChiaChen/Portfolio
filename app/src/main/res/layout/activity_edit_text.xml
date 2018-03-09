@@ -12,12 +12,12 @@
 
     <!--HeaderLayout-->
     <LinearLayout
+        android:id="@+id/layout_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/layoutFooter">
+        app:layout_constraintBottom_toTopOf="@id/layout_footer">
 
         <ImageView
             android:layout_width="150dp"
@@ -35,7 +35,7 @@
 
     <!--FooterLayout-->
     <LinearLayout
-        android:id="@+id/layoutFooter"
+        android:id="@+id/layout_footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -49,7 +49,10 @@
             android:layout_marginBottom="14dp"
             android:layout_marginStart="3dp"
             android:text="Enter passcode"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:alpha="0"
+            tools:alpha="1"
+            />
 
         <!--Todo: letterSpacing, imeOptions-->
         <EditText
@@ -61,6 +64,8 @@
             android:letterSpacing="0.2"
             android:maxLines="1"
             android:singleLine="true"
+            android:alpha="0"
+            tools:alpha="1"
             />
 
         <!--Todo: backgroundTint-->
@@ -75,6 +80,10 @@
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textAllCaps="false"
+            android:scaleX="0"
+            android:scaleY="0"
+            tools:scaleX="1"
+            tools:scaleY="1"
             />
     </LinearLayout>
 
