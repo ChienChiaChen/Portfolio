@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Portfolio</string>
 
-    <string name="progress_button">Progress Button</string>
+    <string name="progress_button">1. Progress Button</string>
     <string name="progress_button_download">Download</string>
     <string name="progress_button_downloading">Downloading</string>
     <string name="progress_button_downloaded">Downloaded</string>
-    <string name="edit_text_button">Edit Text</string>
+    <string name="edit_text_button">2. Edit Text</string>
     <string name="login">Login</string>
 
     <!---->
@@ -14,7 +14,7 @@
     <string name="tab_title_dna_report">DNA Report</string>
     <string name="tab_title_my_coach">My Coach</string>
     <string name="tab_title_more">More</string>
-    <string name="bottom_tab">Bottom Tab</string>
+    <string name="bottom_tab">3. Bottom Tab</string>
     <!---->
 
     <!---->
@@ -25,16 +25,16 @@
     <!---->
 
     <!---->
-    <string name="mvp_practice">MVP Practice</string>
+    <string name="mvp_practice">4. MVP Practice</string>
     <string name="loading">Loading…</string>
     <string name="empty">You don\'t have counters yet :(</string>
     <string name="add_counter">Add Counter</string>
-    <string name="rxjava_retrofit_1">RxJava Retrofit 1</string>
-    <string name="round_image_view">Round Image View</string>
+    <string name="rxjava_retrofit_1">5. RxJava Retrofit 1</string>
+    <string name="round_image_view">6. Round Image View</string>
     <!---->
 
     <!---->
     <string name="card_front">Front</string>
     <string name="card_back">Back</string>
-    <string name="flip_card">Flip Card</string>
+    <string name="flip_card">7. Flip Card</string>
 </resources>
