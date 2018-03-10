@@ -37,4 +37,6 @@
     <string name="card_front">Front</string>
     <string name="card_back">Back</string>
     <string name="flip_card">7. Flip Card</string>
+    <string name="activity_transition">8. Activity transition</string>
+    <string name="transition_b">fab_button</string>
 </resources>

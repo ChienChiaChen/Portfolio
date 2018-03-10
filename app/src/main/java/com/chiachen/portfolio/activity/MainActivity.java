@@ -40,6 +40,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openFlipCardActivity(View view) {
-        startActivity(new Intent(MainActivity.this, FlipCardActivity.class));
+        startActivity(new Intent(MainActivity.this, ActivityTransitionA.class));
     }
 }

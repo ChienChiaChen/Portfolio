@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chiachen.portfolio.activity.ActivityTransitionB">
+
+    <TextView
+        android:id="@+id/text_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fab_b"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:textSize="30sp"
+        android:text="B"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:scaleX="0"
+        android:scaleY="0"
+        tools:scaleX="1"
+        tools:scaleY="1"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:transitionName="@string/transition_b"
+        app:backgroundTint="@color/colorAccent"
+        app:elevation="5dp"
+        app:fabSize="auto"
+        app:pressedTranslationZ="30dp"
+        tools:targetApi="21"/>
+
+</RelativeLayout>

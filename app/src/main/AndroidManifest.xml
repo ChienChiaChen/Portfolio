@@ -35,6 +35,10 @@
         </activity>
         <activity android:name=".activity.FlipCardActivity">
         </activity>
+        <activity android:name=".activity.ActivityTransitionA">
+        </activity>
+        <activity android:name=".activity.ActivityTransitionB">
+        </activity>
     </application>
 
 </manifest>
