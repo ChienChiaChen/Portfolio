@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Portfolio</string>
+    <!--<string name="app_name">Portfolio</string>-->
 
     <string name="progress_button">1. Progress Button</string>
     <string name="progress_button_download">Download</string>
