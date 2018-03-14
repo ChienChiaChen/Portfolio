@@ -39,6 +39,8 @@
         </activity>
         <activity android:name=".activity.ActivityTransitionB">
         </activity>
+        <activity android:name=".activity.ReposListActivity">
+        </activity>
     </application>
 
 </manifest>

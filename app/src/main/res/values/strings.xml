@@ -39,4 +39,5 @@
     <string name="flip_card">7. Flip Card</string>
     <string name="activity_transition">8. Activity transition</string>
     <string name="transition_b">fab_button</string>
+    <string name="dagger2_with_github">9. Dagger2 with Github service</string>
 </resources>

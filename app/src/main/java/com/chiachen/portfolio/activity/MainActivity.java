@@ -40,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openFlipCardActivity(View view) {
+        startActivity(new Intent(MainActivity.this, FlipCardActivity.class));
+    }
+
+    public void openTransitionActivity(View view) {
         startActivity(new Intent(MainActivity.this, ActivityTransitionA.class));
+    }
+
+    public void openReposListActivity(View view) {
+        startActivity(new Intent(MainActivity.this, ReposListActivity.class));
     }
 }
