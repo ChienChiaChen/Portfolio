@@ -22,6 +22,11 @@ android {
             resValue "string", "app_name", "Portfolio_Debug"
         }
     }
+
+//    packagingOptions {
+//        exclude 'META-INF/services/javax.annotation.processing.Processor'
+//    }
+
 }
 
 dependencies {
@@ -41,4 +46,8 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     compile 'com.google.code.gson:gson:2.8.2'
+
+    compile 'com.google.dagger:dagger:2.0.2' // dagger2
+    annotationProcessor "com.google.dagger:dagger-compiler:2.0.2" // dagger2
+    provided 'javax.annotation:jsr250-api:1.0'
 }
