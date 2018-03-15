@@ -86,5 +86,13 @@
             android:text="@string/dagger2_with_github"
             android:textAllCaps="false"
             android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openRxJavaExampleActivity"
+            android:text="@string/rx_java_example"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black" />
     </LinearLayout>
 </ScrollView>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.chiachen.portfolio.R;
+import com.chiachen.portfolio.activity.rxjava.RxJavaExampleActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,5 +50,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void openReposListActivity(View view) {
         startActivity(new Intent(MainActivity.this, ReposListActivity.class));
+    }
+
+    public void openRxJavaExampleActivity(View view) {
+        startActivity(new Intent(MainActivity.this, RxJavaExampleActivity.class));
     }
 }

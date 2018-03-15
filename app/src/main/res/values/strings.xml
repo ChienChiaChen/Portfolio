@@ -40,4 +40,7 @@
     <string name="activity_transition">8. Activity transition</string>
     <string name="transition_b">fab_button</string>
     <string name="dagger2_with_github">9. Dagger2 with Github service</string>
+
+    <string name="rx_java_example">10. RxJava Example</string>
+    <string name="rx_java_create">1. Create</string>
 </resources>

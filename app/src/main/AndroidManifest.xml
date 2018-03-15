@@ -42,6 +42,10 @@
         </activity>
         <activity android:name=".activity.ReposListActivity">
         </activity>
+        <activity android:name=".activity.rxjava.RxJavaExampleActivity">
+        </activity>
+        <activity android:name=".activity.rxjava.RxJavaCreateActivity">
+        </activity>
     </application>
 
 </manifest>
