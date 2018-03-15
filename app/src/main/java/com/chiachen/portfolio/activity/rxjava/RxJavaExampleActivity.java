@@ -18,4 +18,8 @@ public class RxJavaExampleActivity extends BaseActivity {
     public void openLessonCreate(View view) {
         startActivity(new Intent(RxJavaExampleActivity.this, RxJavaCreateActivity.class));
     }
+
+    public void openLessonMap(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, RxJavaMapActivity.class));
+    }
 }

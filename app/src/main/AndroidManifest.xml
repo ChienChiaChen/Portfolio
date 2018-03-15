@@ -46,6 +46,8 @@
         </activity>
         <activity android:name=".activity.rxjava.RxJavaCreateActivity">
         </activity>
+        <activity android:name=".activity.rxjava.RxJavaMapActivity">
+        </activity>
     </application>
 
 </manifest>
