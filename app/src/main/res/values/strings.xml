@@ -45,4 +45,5 @@
     <string name="rx_java_create">1. Create</string>
     <string name="rx_java_map">2. Map</string>
     <string name="rx_java_flat_map">3. FlatMap</string>
+    <string name="rx_java_concat_map">4. Concat</string>
 </resources>

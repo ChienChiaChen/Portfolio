@@ -26,4 +26,9 @@ public class RxJavaExampleActivity extends BaseActivity {
     public void openLessonFlatMap(View view) {
         startActivity(new Intent(RxJavaExampleActivity.this, RxJavaFlatMapActivity.class));
     }
+
+    public void openLessonConcatMap(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, RxJavaConcatMapActivity.class));
+
+    }
 }

@@ -46,7 +46,6 @@ public class RxJavaFlatMapActivity extends BaseActivity {
                         .subscribeOn(AppSchedulerProvider.io());// <--- on diff thread.
                     }
                 })
-                .subscribeOn(AppSchedulerProvider.io())
                 .observeOn(AppSchedulerProvider.ui())
                 .subscribe(new Consumer<String>() {
                     @Override

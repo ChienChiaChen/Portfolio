@@ -50,6 +50,8 @@
         </activity>
         <activity android:name=".activity.rxjava.RxJavaFlatMapActivity">
         </activity>
+        <activity android:name=".activity.rxjava.RxJavaConcatMapActivity">
+        </activity>
     </application>
 
 </manifest>
