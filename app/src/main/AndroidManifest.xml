@@ -48,6 +48,8 @@
         </activity>
         <activity android:name=".activity.rxjava.RxJavaMapActivity">
         </activity>
+        <activity android:name=".activity.rxjava.RxJavaFlatMapActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -44,4 +44,5 @@
     <string name="rx_java_example">10. RxJava Example</string>
     <string name="rx_java_create">1. Create</string>
     <string name="rx_java_map">2. Map</string>
+    <string name="rx_java_flat_map">3. FlatMap</string>
 </resources>
