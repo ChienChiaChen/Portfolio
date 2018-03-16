@@ -2,6 +2,8 @@ package com.chiachen.portfolio.global;
 
 import android.app.Application;
 
+import com.facebook.stetho.Stetho;
+
 /**
  * Created by jianjiacheng on 15/03/2018.
  */
@@ -16,6 +18,12 @@ public class BaseApplication extends Application {
         super.onCreate();
         sInstance = this;
         buildComponentAndInject();
+
+        Stetho.initialize(
+                Stetho.newInitializerBuilder(this)
+                .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+                .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
+                .build());
     }
 
     public void buildComponentAndInject() {
