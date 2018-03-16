@@ -4,22 +4,30 @@ import android.content.Context;
 
 import com.chiachen.portfolio.utils.progress.ProgressCancelListener;
 import com.chiachen.portfolio.utils.progress.ProgressDialogHandler;
+import com.chiachen.portfolio.view.IBaseView;
 
-import io.reactivex.observers.ResourceObserver;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.net.SocketException;
+
+import io.reactivex.observers.DisposableObserver;
+import okhttp3.ResponseBody;
+import retrofit2.HttpException;
 
 /**
- * Created by jianjiacheng on 07/03/2018.
+ * Created by jianjiacheng on 16/03/2018.
  */
 
-public class ProgressSubscriber<T> extends ResourceObserver<T> implements ProgressCancelListener{
+public class ProgressSubscriber<T> extends DisposableObserver<T> implements ProgressCancelListener {
     private SubscriberOnNextListener mNextListener;
-    private Context mContext;
-    private ProgressDialogHandler mProgressDialogHandler;
+    private ProgressDialogHandler mProgressHandler;
+    private IBaseView mView;
 
-    public ProgressSubscriber(Context context, SubscriberOnNextListener nextListener) {
-        mContext = context;
+    public ProgressSubscriber(IBaseView baseView, Context context, SubscriberOnNextListener nextListener) {
+        mView = baseView;
         mNextListener = nextListener;
-        mProgressDialogHandler = new ProgressDialogHandler(context, this, true);
+        mProgressHandler = new ProgressDialogHandler(context, this,true);
     }
 
     @Override
@@ -29,16 +37,29 @@ public class ProgressSubscriber<T> extends ResourceObserver<T> implements Progre
 
     @Override
     public void onNext(T t) {
-        mNextListener.onNext(t);
-    }
-
-    @Override
-    public void onError(Throwable t) {
-        dismissProgressDialog();
+        if (null != mNextListener) {
+            mNextListener.onNext(t);
+        }
     }
 
     @Override
     public void onComplete() {
+        dismissProgressDialog();
+    }
+
+    @Override
+    public void onError(Throwable throwable) {
+        if (throwable instanceof HttpException) {
+            ResponseBody responseBody = ((HttpException) throwable).response().errorBody();
+            mView.onUnknownError(getErrorMsg(responseBody));
+        } else if (throwable instanceof SocketException) {
+            mView.onTimeout();
+        } else if (throwable instanceof IOException) {
+            mView.onNetworkError();
+        } else {
+            mView.onUnknownError(throwable.getMessage());
+        }
+
         dismissProgressDialog();
     }
 
@@ -50,15 +71,24 @@ public class ProgressSubscriber<T> extends ResourceObserver<T> implements Progre
     }
 
     private void showProgressDialog() {
-        if (null != mProgressDialogHandler) {
-            mProgressDialogHandler.obtainMessage(ProgressDialogHandler.SHOW_PROGRESS_DIALOG).sendToTarget();
+        if (null != mProgressHandler) {
+            mProgressHandler.obtainMessage(ProgressDialogHandler.SHOW_PROGRESS_DIALOG).sendToTarget();
+        }
+    }
+    private void dismissProgressDialog() {
+        if (null != mProgressHandler) {
+            mProgressHandler.obtainMessage(ProgressDialogHandler.DISMISS_PROGRESS_DIALOG).sendToTarget();
+            mProgressHandler = null;
         }
     }
 
-    private void dismissProgressDialog() {
-        if (null != mProgressDialogHandler) {
-            mProgressDialogHandler.obtainMessage(ProgressDialogHandler.DISMISS_PROGRESS_DIALOG).sendToTarget();
-            mProgressDialogHandler = null;
+    private String getErrorMsg(ResponseBody responseBody) {
+        try {
+            JSONObject jsonObject = new JSONObject(responseBody.toString());
+            return jsonObject.getString("message");
+        } catch (Exception e) {
+            return e.getMessage();
         }
     }
+
 }

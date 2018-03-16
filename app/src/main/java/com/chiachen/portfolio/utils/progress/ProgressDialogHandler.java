@@ -21,7 +21,8 @@ public class ProgressDialogHandler extends Handler {
     private boolean cancelable;
     private ProgressCancelListener mProgressCancelListener;
 
-    public ProgressDialogHandler(Context context, ProgressCancelListener mProgressCancelListener,
+    public ProgressDialogHandler(Context context,
+                                 ProgressCancelListener mProgressCancelListener,
                                  boolean cancelable) {
         super();
         this.context = context;
