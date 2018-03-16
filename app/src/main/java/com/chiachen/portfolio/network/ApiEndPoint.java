@@ -5,5 +5,5 @@ package com.chiachen.portfolio.network;
  */
 
 public interface ApiEndPoint {
-    String GITHUB_REPOS ="/users/{user}/repos";
+    String GIT_HUB_REPOS = "/users/{user}/repos";
 }

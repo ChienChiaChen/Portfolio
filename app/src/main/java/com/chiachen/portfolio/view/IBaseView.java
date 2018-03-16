@@ -7,4 +7,9 @@ package com.chiachen.portfolio.view;
 public interface IBaseView {
     void showLoading();
     void hideLoading();
+    void onUnknownError(String error);
+    void onTimeout();
+    void onNetworkError();
+    boolean isNetworkConnected();
+    void onConnectionError();
 }

@@ -1,21 +1,23 @@
 package com.chiachen.portfolio.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.chiachen.portfolio.R;
-import com.chiachen.portfolio.network.HttpMethods;
-import com.chiachen.portfolio.network.Service.entity.Subject;
+import com.chiachen.portfolio.network.AppSchedulerProvider;
+import com.chiachen.portfolio.network.RetrofitFactory;
+
+import com.chiachen.portfolio.network.response.Repo;
 import com.chiachen.portfolio.network.subscribers.ProgressSubscriber;
 import com.chiachen.portfolio.network.subscribers.SubscriberOnNextListener;
 
-import java.util.List;
+import java.util.ArrayList;
+
 
 // Refer to: https://gank.io/post/56e80c2c677659311bed9841
-public class RxJavaRetrofitActivity extends AppCompatActivity {
+public class RxJavaRetrofitActivity extends BaseActivity {
 
     private Button mClickMe;
     private TextView mResult;
@@ -35,16 +37,25 @@ public class RxJavaRetrofitActivity extends AppCompatActivity {
             }
         });
 
-        mOnNextListener = new SubscriberOnNextListener<List<Subject>>() {
+        mOnNextListener = new SubscriberOnNextListener<ArrayList<Repo>>() {
             @Override
-            public void onNext(List<Subject> subjects) {
-                mResult.setText(subjects.toString());
+            public void onNext(ArrayList<Repo> subjects) {
+                StringBuilder stringBuffer = new StringBuilder();
+                for (Repo subject : subjects) {
+                    stringBuffer.append(subject.language);
+                    stringBuffer.append("\n");
+                }
+                mResult.setText(stringBuffer.toString());
             }
         };
     }
 
     public void getMovie() {
-        HttpMethods.getInstance()
-                .getTopMovie(0,10, new ProgressSubscriber<List<Subject>>(RxJavaRetrofitActivity.this,mOnNextListener));
+        RetrofitFactory.getInstance().API()
+                .getRepoData("JasonChienPrenetics")
+                .subscribeOn(AppSchedulerProvider.io())
+                .observeOn(AppSchedulerProvider.ui())
+                .subscribe(new ProgressSubscriber<ArrayList<Repo>>(this, this, mOnNextListener));
+
     }
 }

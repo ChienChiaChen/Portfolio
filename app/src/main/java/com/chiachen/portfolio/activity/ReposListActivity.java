@@ -45,7 +45,7 @@ public class ReposListActivity extends AppCompatActivity {
 
     private void loadData(final ListAdapter listAdapter) {
         mGitHubService
-                .getRepoData("SpikeKing")
+                .getRepoData("JasonChienPrenetics")
                 .subscribeOn(AppSchedulerProvider.io())
                 .observeOn(AppSchedulerProvider.ui())
                 .subscribe(new Consumer<ArrayList<Repo>>() {

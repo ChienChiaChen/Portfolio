@@ -22,7 +22,7 @@ public class ApiModule {
     @Singleton
     protected GitHubService provideGitHubService() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BaseUrls.GITHUB_BASE_URL)
+                .baseUrl(BaseUrls.GIT_HUB_BASE_URL)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

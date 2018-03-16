@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 
-public class BaseActivity extends AppCompatActivity {
+import com.chiachen.portfolio.view.IBaseView;
+
+public class BaseActivity extends AppCompatActivity implements IBaseView {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -22,6 +24,31 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     public void hideLoading() {
+
+    }
+
+    @Override
+    public void onUnknownError(String error) {
+
+    }
+
+    @Override
+    public void onTimeout() {
+
+    }
+
+    @Override
+    public void onNetworkError() {
+
+    }
+
+    @Override
+    public boolean isNetworkConnected() {
+        return false;
+    }
+
+    @Override
+    public void onConnectionError() {
 
     }
 

@@ -1,6 +1,5 @@
-package com.chiachen.portfolio.network.Service;
+package com.chiachen.portfolio.network;
 
-import com.chiachen.portfolio.network.ApiEndPoint;
 import com.chiachen.portfolio.network.response.Repo;
 
 import java.util.ArrayList;
@@ -10,10 +9,10 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 /**
- * Created by jianjiacheng on 15/03/2018.
+ * Created by jianjiacheng on 16/03/2018.
  */
 
-public interface GitHubService {
+public interface APIFunction {
 
     @GET(ApiEndPoint.GIT_HUB_REPOS)
     Observable<ArrayList<Repo>> getRepoData(@Path("user") String user);

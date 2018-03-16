@@ -5,6 +5,5 @@ package com.chiachen.portfolio.network;
  */
 
 public interface BaseUrls {
-    String GITHUB_BASE_URL = "https://api.github.com/";
-
+    String GIT_HUB_BASE_URL = "https://api.github.com/";
 }
