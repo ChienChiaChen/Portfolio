@@ -18,6 +18,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class ServiceFactory {
+    private static final int DEFAULT_TIMEOUT = 15;
+    public static final String LOG_REQUEST = "LOG_REQUEST";
+    public static final String LOG_RESPONSE = "LOG_RESPONSE";
+    public static final String LOG_HEADER = "LOG_HEADER";
 
     public static <T> T createServiceFrom(final Class<T> serviceClass, String url) {
         Retrofit retrofit = new Retrofit.Builder()
@@ -35,9 +39,9 @@ public class ServiceFactory {
                 .addInterceptor(getLoggingInterceptor())
                 .addNetworkInterceptor(new StethoInterceptor())
                 .retryOnConnectionFailure(true)
-                .writeTimeout(15, TimeUnit.SECONDS)
-                .readTimeout(15, TimeUnit.SECONDS)
-                .connectTimeout(15, TimeUnit.SECONDS)
+                .writeTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
+                .readTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
+                .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
                 .build();
     }
 
@@ -46,9 +50,9 @@ public class ServiceFactory {
                 .loggable(BuildConfig.DEBUG)
                 .setLevel(Level.BASIC)
                 .log(Platform.INFO)
-                .request("Request")
-                .response("Response")
-                .addHeader("version", BuildConfig.VERSION_NAME)
+                .request(LOG_REQUEST)
+                .response(LOG_RESPONSE)
+                .addHeader(LOG_HEADER, BuildConfig.VERSION_NAME)
                 .build());
     }
 }
