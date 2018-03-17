@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitFactory {
 
-    private static RetrofitFactory sRetrofitFactory;
+    private volatile static RetrofitFactory sRetrofitFactory;
     private Retrofit mRetrofit;
 
     private RetrofitFactory() {
