@@ -9,7 +9,7 @@ import com.chiachen.portfolio.R;
 import com.chiachen.portfolio.adapter.githubrepos.ListAdapter;
 import com.chiachen.portfolio.global.BaseApplication;
 import com.chiachen.portfolio.network.AppSchedulerProvider;
-import com.chiachen.portfolio.network.Service.GitHubService;
+import com.chiachen.portfolio.network.service.GitHubService;
 import com.chiachen.portfolio.network.response.Repo;
 
 import java.util.ArrayList;

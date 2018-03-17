@@ -1,7 +1,11 @@
 package com.chiachen.portfolio.network;
 
+import com.chiachen.portfolio.network.config.BaseUrls;
+import com.chiachen.portfolio.network.config.HttpConfig;
+
 import java.util.concurrent.TimeUnit;
 
+import io.reactivex.internal.functions.ObjectHelper;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -14,17 +18,21 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitFactory {
 
     private static RetrofitFactory sRetrofitFactory;
-    private static APIFunction sAPIFunction;
+    private Retrofit mRetrofit;
 
     private RetrofitFactory() {
-        Retrofit retrofit = new Retrofit.Builder()
+         mRetrofit = new Retrofit.Builder()
                 .baseUrl(BaseUrls.GIT_HUB_BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(getCustomOkHttpClient())
                 .build();
+    }
 
-        sAPIFunction = retrofit.create(APIFunction.class);
+    public <T> T create(Class<T> clazz) {
+        ObjectHelper.requireNonNull(mRetrofit, "Retrofit is null");
+
+        return mRetrofit.create(clazz);
     }
 
     public static RetrofitFactory getInstance() {
@@ -38,15 +46,11 @@ public class RetrofitFactory {
         return sRetrofitFactory;
     }
 
-    public APIFunction API() {
-        return sAPIFunction;
-    }
-
     public static OkHttpClient getCustomOkHttpClient() {
         return new OkHttpClient.Builder()
                 .addInterceptor(InterceptorUtil.getLoggingInterceptor())
                 .addNetworkInterceptor(InterceptorUtil.getStethoInterceptor())
-                .retryOnConnectionFailure(HttpConfig.needToRetry)
+                .retryOnConnectionFailure(HttpConfig.NEED_TO_RETRY)
                 .writeTimeout(HttpConfig.DEFAULT_TIMEOUT, TimeUnit.SECONDS)
                 .readTimeout(HttpConfig.DEFAULT_TIMEOUT, TimeUnit.SECONDS)
                 .connectTimeout(HttpConfig.DEFAULT_TIMEOUT, TimeUnit.SECONDS)

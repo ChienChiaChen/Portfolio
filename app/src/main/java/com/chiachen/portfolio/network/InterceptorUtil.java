@@ -1,6 +1,7 @@
 package com.chiachen.portfolio.network;
 
 import com.chiachen.portfolio.BuildConfig;
+import com.chiachen.portfolio.network.config.HttpConfig;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.ihsanbal.logging.Level;
 import com.ihsanbal.logging.LoggingInterceptor;
@@ -23,9 +24,9 @@ public class InterceptorUtil {
                 .loggable(BuildConfig.DEBUG)
                 .setLevel(Level.BASIC)
                 .log(Platform.INFO)
-                .request(HttpConfig.LOG_REQUEST)
-                .response(HttpConfig.LOG_RESPONSE)
-                .addHeader(HttpConfig.LOG_HEADER, BuildConfig.VERSION_NAME)
+                .request(HttpConfig.TAG_LOG_REQUEST)
+                .response(HttpConfig.TAG_LOG_RESPONSE)
+                .addHeader(HttpConfig.TAG_LOG_HEADER, BuildConfig.VERSION_NAME)
                 .build());
     }
 
@@ -37,11 +38,10 @@ public class InterceptorUtil {
         return  new Interceptor() {
                 @Override
                 public Response intercept(Chain chain) throws IOException {
-                    Request mRequest=chain.request();
+                    Request mRequest = chain.request(); // For token
                     return chain.proceed(mRequest);
                 }
             };
-
     }
 
 }

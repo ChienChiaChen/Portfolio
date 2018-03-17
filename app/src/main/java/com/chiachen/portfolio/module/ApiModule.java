@@ -1,7 +1,7 @@
 package com.chiachen.portfolio.module;
 
-import com.chiachen.portfolio.network.BaseUrls;
-import com.chiachen.portfolio.network.Service.GitHubService;
+import com.chiachen.portfolio.network.config.BaseUrls;
+import com.chiachen.portfolio.network.service.GitHubService;
 
 import javax.inject.Singleton;
 

@@ -1,4 +1,4 @@
-package com.chiachen.portfolio.network;
+package com.chiachen.portfolio.network.config;
 
 /**
  * Created by jianjiacheng on 15/03/2018.
