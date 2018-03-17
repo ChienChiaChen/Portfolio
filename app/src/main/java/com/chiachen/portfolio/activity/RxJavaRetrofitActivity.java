@@ -6,8 +6,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.chiachen.portfolio.R;
-import com.chiachen.portfolio.network.AppSchedulerProvider;
 import com.chiachen.portfolio.network.RetrofitFactory;
+import com.chiachen.portfolio.network.SchedulersTransformer;
 import com.chiachen.portfolio.network.response.Repo;
 import com.chiachen.portfolio.network.service.GitHubService;
 import com.chiachen.portfolio.network.subscribers.ProgressSubscriber;
@@ -53,8 +53,7 @@ public class RxJavaRetrofitActivity extends BaseActivity {
     public void getMovie() {
         RetrofitFactory.getInstance().create(GitHubService.class)
                 .getRepoData("JasonChienPrenetics")
-                .subscribeOn(AppSchedulerProvider.io())
-                .observeOn(AppSchedulerProvider.ui())
+                .compose(SchedulersTransformer.<ArrayList<Repo>>ioToMain())
                 .subscribe(new ProgressSubscriber<ArrayList<Repo>>(this, this, mOnNextListener));
 
     }
