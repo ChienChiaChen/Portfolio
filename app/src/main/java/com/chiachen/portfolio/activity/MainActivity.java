@@ -59,4 +59,8 @@ public class MainActivity extends AppCompatActivity {
     public void openTabLayoutPractices(View view) {
         startActivity(new Intent(MainActivity.this, TabLayoutActivity.class));
     }
+
+    public void openBroadcastActivity(View view) {
+        startActivity(new Intent(MainActivity.this, BroadcastActivity.class));
+    }
 }

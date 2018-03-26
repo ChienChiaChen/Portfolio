@@ -47,4 +47,5 @@
     <string name="rx_java_flat_map">3. FlatMap</string>
     <string name="rx_java_concat_map">4. Concat</string>
     <string name="tab_layout">11. tab layout</string>
+    <string name="broadcast_receiver">12. Broadcast Receiver</string>
 </resources>

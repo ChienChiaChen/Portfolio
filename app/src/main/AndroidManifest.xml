@@ -56,7 +56,9 @@
             android:name=".activity.TabLayoutActivity"
             android:theme="@style/AppTheme.NoActionBar_">
         </activity>
-        <activity android:name=".activity.BroadcastActivity">
+
+        <activity android:name=".activity.BroadcastActivity"
+                  android:theme="@style/AppTheme.NoActionBar_">
         </activity>
     </application>
 
