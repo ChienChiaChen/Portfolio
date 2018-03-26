@@ -55,4 +55,8 @@ public class MainActivity extends AppCompatActivity {
     public void openRxJavaExampleActivity(View view) {
         startActivity(new Intent(MainActivity.this, RxJavaExampleActivity.class));
     }
+
+    public void openTabLayoutPractices(View view) {
+        startActivity(new Intent(MainActivity.this, TabLayoutActivity.class));
+    }
 }

@@ -94,5 +94,13 @@
             android:text="@string/rx_java_example"
             android:textAllCaps="false"
             android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openTabLayoutPractices"
+            android:text="@string/tab_layout"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black" />
     </LinearLayout>
 </ScrollView>
