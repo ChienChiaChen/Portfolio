@@ -48,4 +48,6 @@
     <string name="rx_java_concat_map">4. Concat</string>
     <string name="tab_layout">11. tab layout</string>
     <string name="broadcast_receiver">12. Broadcast Receiver</string>
+    <string name="show_dialog">Show Dialog</string>
+    <string name="show_notification">Show Notification</string>
 </resources>
