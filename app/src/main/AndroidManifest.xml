@@ -57,9 +57,14 @@
             android:theme="@style/AppTheme.NoActionBar_">
         </activity>
 
-        <activity android:name=".activity.BroadcastActivity"
-                  android:theme="@style/AppTheme.NoActionBar_">
+        <activity
+            android:name=".activity.BroadcastActivity"
+            android:theme="@style/AppTheme.NoActionBar_">
         </activity>
+
+        <activity android:name=".activity.SqliteActivity">
+        </activity>
+
     </application>
 
 </manifest>

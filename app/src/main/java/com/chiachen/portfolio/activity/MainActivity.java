@@ -63,4 +63,8 @@ public class MainActivity extends AppCompatActivity {
     public void openBroadcastActivity(View view) {
         startActivity(new Intent(MainActivity.this, BroadcastActivity.class));
     }
+
+    public void openSqliteActivity(View view) {
+        startActivity(new Intent(MainActivity.this, SqliteActivity.class));
+    }
 }
