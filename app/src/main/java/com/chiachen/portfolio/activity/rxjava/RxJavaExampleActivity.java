@@ -29,6 +29,10 @@ public class RxJavaExampleActivity extends BaseActivity {
 
     public void openLessonConcatMap(View view) {
         startActivity(new Intent(RxJavaExampleActivity.this, RxJavaConcatMapActivity.class));
+    }
+
+    public void openThrottle(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, ThrottleActivity.class));
 
     }
 }
