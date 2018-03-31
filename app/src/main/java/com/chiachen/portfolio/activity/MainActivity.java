@@ -67,4 +67,8 @@ public class MainActivity extends AppCompatActivity {
     public void openSqliteActivity(View view) {
         startActivity(new Intent(MainActivity.this, SqliteActivity.class));
     }
+
+    public void openServiceActivity(View view) {
+        startActivity(new Intent(MainActivity.this, ServiceActivity.class));
+    }
 }

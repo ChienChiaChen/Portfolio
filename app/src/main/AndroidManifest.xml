@@ -64,6 +64,13 @@
         </activity>
         <activity android:name=".activity.rxjava.ThrottleActivity">
         </activity>
+        <activity android:name=".activity.ServiceActivity">
+        </activity>
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true">
+        </service>
     </application>
 
 </manifest>
