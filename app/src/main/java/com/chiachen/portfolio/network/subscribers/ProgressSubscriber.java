@@ -2,8 +2,8 @@ package com.chiachen.portfolio.network.subscribers;
 
 import android.content.Context;
 
-import com.chiachen.portfolio.utils.progress.ProgressCancelListener;
-import com.chiachen.portfolio.utils.progress.ProgressDialogHandler;
+import com.chiachen.portfolio.network.progress.ProgressCancelListener;
+import com.chiachen.portfolio.network.progress.ProgressDialogHandler;
 import com.chiachen.portfolio.view.IBaseView;
 
 import org.json.JSONObject;

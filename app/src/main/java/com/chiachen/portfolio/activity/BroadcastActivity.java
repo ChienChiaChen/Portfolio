@@ -43,7 +43,7 @@ public class BroadcastActivity extends AppCompatActivity {
 
             Intent call = new Intent(context, MainActivity.class);
             call.putExtra("notiId", 1);
-            PendingIntent pIntent = PendingIntent.getActivity(context, 0, call, 0);
+            PendingIntent pIntent = PendingIntent.getActivity(context, 0, call, PendingIntent.FLAG_NO_CREATE);
 
             Notification notification = new NotificationCompat.Builder(context)
                     .setSmallIcon(R.mipmap.ic_launcher)
