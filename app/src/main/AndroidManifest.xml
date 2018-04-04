@@ -71,6 +71,9 @@
             android:name=".service.MyService"
             android:enabled="true">
         </service>
+
+        <activity android:name=".activity.ParcelableActivity">
+        </activity>
     </application>
 
 </manifest>

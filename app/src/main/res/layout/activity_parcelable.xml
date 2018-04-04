@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chiachen.portfolio.activity.ParcelableActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_gender"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_select_male"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/register_radio_left_border"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/male"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_select_female"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/register_radio_right_border"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/female"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_gender"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:hint="@string/name"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/et_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_border"
+        android:text="@string/submit"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="parcelSend"
+        />
+
+</RelativeLayout>

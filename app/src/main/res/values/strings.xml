@@ -52,4 +52,11 @@
     <string name="show_notification">Show Notification</string>
     <string name="sqlite">13. Sqlite</string>
     <string name="service">14. Service</string>
+    <string name="parcelable">15. Parcelable</string>
+    <string name="male_or_female">Male or Female</string>
+    <string name="male">male</string>
+    <string name="female">female</string>
+    <string name="name">name</string>
+    <string name="submit">Submit</string>
+
 </resources>

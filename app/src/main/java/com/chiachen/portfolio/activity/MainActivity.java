@@ -69,6 +69,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openServiceActivity(View view) {
-        startActivity(new Intent(MainActivity.this, ServiceActivity.class));
+        startActivity(new Intent(MainActivity.this, ParcelableActivity.class));
     }
 }
