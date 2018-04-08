@@ -55,7 +55,7 @@
             />
 
         <!--Todo: letterSpacing, imeOptions-->
-        <EditText
+        <com.chiachen.portfolio.utils.ui.PasswordEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="********"
