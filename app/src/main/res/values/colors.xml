@@ -16,4 +16,6 @@
     <color name="cardFront">#434850</color>
     <color name="cardBack">#bc4c4a</color>
 
+    <color name="regard_container_bkg">#303030</color>
+    <color name="regard_image_bkg">#292929</color>
 </resources>

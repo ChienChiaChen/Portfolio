@@ -75,4 +75,8 @@ public class MainActivity extends AppCompatActivity {
     public void openParcelableActivity(View view) {
         startActivity(new Intent(MainActivity.this, ParcelableActivity.class));
     }
+
+    public void openBottomDialogActivity(View view) {
+        startActivity(new Intent(MainActivity.this, BottomDialogTestActivity.class));
+    }
 }
