@@ -1,4 +1,4 @@
-package com.chiachen.portfolio.utils.progress;
+package com.chiachen.portfolio.network.progress;
 
 /**
  * Created by jianjiacheng on 07/03/2018.

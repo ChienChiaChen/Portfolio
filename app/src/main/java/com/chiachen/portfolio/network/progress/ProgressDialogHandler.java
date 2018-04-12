@@ -1,4 +1,4 @@
-package com.chiachen.portfolio.utils.progress;
+package com.chiachen.portfolio.network.progress;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -17,26 +17,26 @@ public class ProgressDialogHandler extends Handler {
 
     private ProgressDialog pd;
 
-    private Context context;
-    private boolean cancelable;
+    private Context mContext;
+    private boolean mCancelable;
     private ProgressCancelListener mProgressCancelListener;
 
     public ProgressDialogHandler(Context context,
-                                 ProgressCancelListener mProgressCancelListener,
+                                 ProgressCancelListener progressCancelListener,
                                  boolean cancelable) {
         super();
-        this.context = context;
-        this.mProgressCancelListener = mProgressCancelListener;
-        this.cancelable = cancelable;
+        mContext = context;
+        mProgressCancelListener = progressCancelListener;
+        mCancelable = cancelable;
     }
 
     private void initProgressDialog() {
         if (pd == null) {
-            pd = new ProgressDialog(context);
+            pd = new ProgressDialog(mContext);
 
-            pd.setCancelable(cancelable);
+            pd.setCancelable(mCancelable);
 
-            if (cancelable) {
+            if (mCancelable) {
                 pd.setOnCancelListener(new DialogInterface.OnCancelListener() {
                     @Override
                     public void onCancel(DialogInterface dialogInterface) {
