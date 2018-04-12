@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.chiachen.portfolio.R;
+import com.chiachen.portfolio.activity.page.RoutingPageAActivity;
 import com.chiachen.portfolio.activity.rxjava.RxJavaExampleActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -78,5 +79,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void openBottomDialogActivity(View view) {
         startActivity(new Intent(MainActivity.this, BottomDialogTestActivity.class));
+    }
+
+    public void openRoutingPageActivity(View view) {
+        startActivity(new Intent(MainActivity.this, RoutingPageAActivity.class));
     }
 }
