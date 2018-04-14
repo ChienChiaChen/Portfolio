@@ -33,6 +33,5 @@ public class RxJavaExampleActivity extends BaseActivity {
 
     public void openThrottle(View view) {
         startActivity(new Intent(RxJavaExampleActivity.this, ThrottleActivity.class));
-
     }
 }

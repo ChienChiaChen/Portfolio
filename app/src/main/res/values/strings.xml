@@ -61,5 +61,6 @@
     <string name="submit">Submit</string>
     <string name="bottom_alert">Alert</string>
     <string name="bottom_dialer">Dialer</string>
+    <string name="throttle">5. throttle</string>
 
 </resources>
