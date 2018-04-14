@@ -84,4 +84,8 @@ public class MainActivity extends AppCompatActivity {
     public void openRoutingPageActivity(View view) {
         startActivity(new Intent(MainActivity.this, RoutingPageAActivity.class));
     }
+
+    public void openDrawerActivity(View view) {
+        startActivity(new Intent(MainActivity.this, DrawerExampleActivity.class));
+    }
 }

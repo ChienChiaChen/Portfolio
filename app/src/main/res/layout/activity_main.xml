@@ -147,7 +147,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="openRoutingPageActivity"
-            android:text="Routing page"
+            android:text="@string/routing_page"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openDrawerActivity"
+            android:text="@string/drawer"
             android:textAllCaps="false"
             android:textColor="@android:color/black" />
 
