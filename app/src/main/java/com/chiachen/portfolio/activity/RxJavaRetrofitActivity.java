@@ -21,7 +21,7 @@ public class RxJavaRetrofitActivity extends BaseActivity {
 
     private Button mClickMe;
     private TextView mResult;
-    private SubscriberOnNextListener mOnNextListener;
+    private SubscriberOnNextListener<ArrayList<Repo>> mOnNextListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +54,6 @@ public class RxJavaRetrofitActivity extends BaseActivity {
         RetrofitFactory.getInstance().create(GitHubService.class)
                 .getRepoData("JasonChienPrenetics")
                 .compose(SchedulersTransformer.<ArrayList<Repo>>ioToMain())
-                .subscribe(new ProgressSubscriber<ArrayList<Repo>>(this, this, mOnNextListener));
-
+                .subscribe(new ProgressSubscriber<>(this, this, mOnNextListener));
     }
 }

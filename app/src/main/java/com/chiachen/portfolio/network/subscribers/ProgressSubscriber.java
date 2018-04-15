@@ -19,12 +19,13 @@ import retrofit2.HttpException;
  * Created by jianjiacheng on 16/03/2018.
  */
 
+//https://www.jianshu.com/p/bd758f51742e
 public class ProgressSubscriber<T> extends DisposableObserver<T> implements ProgressCancelListener {
-    private SubscriberOnNextListener mNextListener;
+    private SubscriberOnNextListener<T> mNextListener;
     private ProgressDialogHandler mProgressHandler;
     private IBaseView mView;
 
-    public ProgressSubscriber(IBaseView baseView, Context context, SubscriberOnNextListener nextListener) {
+    public ProgressSubscriber(IBaseView baseView, Context context, SubscriberOnNextListener<T> nextListener) {
         mView = baseView;
         mNextListener = nextListener;
         mProgressHandler = new ProgressDialogHandler(context, this,true);

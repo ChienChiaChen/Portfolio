@@ -19,6 +19,8 @@ public class BaseApplication extends Application {
         sInstance = this;
         buildComponentAndInject();
 
+        ResourceService.init(getApplicationContext());
+
         Stetho.initialize(
                 Stetho.newInitializerBuilder(this)
                 .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
