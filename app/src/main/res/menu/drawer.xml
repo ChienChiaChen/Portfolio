@@ -5,25 +5,21 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/action_home"
-            android:checked="true"
-            android:icon="@drawable/ic_pets"
-            android:title="首頁" />
-
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Camera" />
         <item
-            android:id="@+id/action_help"
-            android:icon="@drawable/ic_help"
-            android:title="使用說明" />
-
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Gallery" />
         <item
-            android:id="@+id/action_settings"
-            android:icon="@drawable/ic_settings"
-            android:title="設定" />
-
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Slideshow" />
         <item
-            android:id="@+id/action_about"
-            android:icon="@drawable/ic_about"
-            android:title="關於" />
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Tools" />
     </group>
 
     <item android:title="Communicate">

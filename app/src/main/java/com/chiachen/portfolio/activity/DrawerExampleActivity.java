@@ -36,27 +36,35 @@ public class DrawerExampleActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 drawerLayout.closeDrawer(GravityCompat.START);
-                int id = item.getItemId();
-                switch (id){
-                    case R.id.action_home:{
-                        Toast.makeText(DrawerExampleActivity.this, "首頁", Toast.LENGTH_SHORT).show();
+                switch (item.getItemId()){
+                    case R.id.nav_camera:{
+                        Toast.makeText(DrawerExampleActivity.this, "Camera", Toast.LENGTH_SHORT).show();
                         return true;
                     }
 
-                    case R.id.action_help:{
-                        Toast.makeText(DrawerExampleActivity.this, "首頁", Toast.LENGTH_SHORT).show();
+                    case R.id.nav_gallery:{
+                        Toast.makeText(DrawerExampleActivity.this, "Gallery", Toast.LENGTH_SHORT).show();
                         return true;
                     }
 
-                    case R.id.action_settings:{
-                        Toast.makeText(DrawerExampleActivity.this, "首頁", Toast.LENGTH_SHORT).show();
+                    case R.id.nav_slideshow:{
+                        Toast.makeText(DrawerExampleActivity.this, "Slideshow", Toast.LENGTH_SHORT).show();
                         return true;
                     }
 
-                    case R.id.action_about:{
-                        Toast.makeText(DrawerExampleActivity.this, "首頁", Toast.LENGTH_SHORT).show();
+                    case R.id.nav_tools:{
+                        Toast.makeText(DrawerExampleActivity.this, "Tools", Toast.LENGTH_SHORT).show();
                         return true;
                     }
+                    case R.id.nav_share:{
+                        Toast.makeText(DrawerExampleActivity.this, "Share", Toast.LENGTH_SHORT).show();
+                        return true;
+                    }
+                    case R.id.nav_send:{
+                        Toast.makeText(DrawerExampleActivity.this, "Send", Toast.LENGTH_SHORT).show();
+                        return true;
+                    }
+
                 }
 
                 return false;
@@ -67,7 +75,7 @@ public class DrawerExampleActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (drawerLayout.isShown()){
+        if (navigation_view.isShown()){
             drawerLayout.closeDrawer(GravityCompat.START);
             return;
         }
@@ -82,8 +90,7 @@ public class DrawerExampleActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        switch (id) {
+        switch (item.getItemId()) {
             case  R.id.action_help:{
                 Toast.makeText(this, "使用說明", Toast.LENGTH_SHORT).show();
                 return true;
