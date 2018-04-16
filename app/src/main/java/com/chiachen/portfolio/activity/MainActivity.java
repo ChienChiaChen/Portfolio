@@ -88,4 +88,8 @@ public class MainActivity extends AppCompatActivity {
     public void openDrawerActivity(View view) {
         startActivity(new Intent(MainActivity.this, DrawerExampleActivity.class));
     }
+
+    public void openContinuousDownload(View view) {
+        startActivity(new Intent(MainActivity.this, ContinuousDownloadActivity.class));
+    }
 }

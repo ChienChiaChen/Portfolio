@@ -67,4 +67,22 @@
 
     <string name="drawer_open">Drawer opened</string>
     <string name="drawer_close">Drawer closed</string>
+    <string name="continuous_download">19. Continuous Download</string>
+    <string name="update_progress_desc">Update progress bar</string>
+
+    <string name="async_task">Async Task(rotatable)</string>
+    <string name="intent_service">Intent Service(rotatable)</string>
+    <string name="time_interval">Time Interval(not rotatable)</string>
+    <string name="delay_emit">Delay emit(not rotatable)</string>
+    <string name="custom_iterator">Custom Iterator(rotatable)</string>
+
+    <string-array name="updaterType">
+        <item>@string/async_task</item>
+        <item>@string/intent_service</item>
+        <item>@string/time_interval</item>
+        <item>@string/delay_emit</item>
+        <item>@string/custom_iterator</item>
+    </string-array>
+
+    <string name="track_leaks">Check memory leak</string>
 </resources>

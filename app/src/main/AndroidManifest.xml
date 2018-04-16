@@ -84,9 +84,11 @@
         </activity>
         <activity android:name=".activity.page.RoutingPageDActivity">
         </activity>
-
-        <activity android:name=".activity.DrawerExampleActivity"
+        <activity
+            android:name=".activity.DrawerExampleActivity"
             android:theme="@style/AppTheme.NoActionBar__">
+        </activity>
+        <activity android:name=".activity.ContinuousDownloadActivity">
         </activity>
     </application>
 
