@@ -15,4 +15,9 @@ public class MainModule {
         cloth.setColor("RED");
         return cloth;
     }
+
+    @Provides
+    public Clothes getClothes(Cloth cloth){
+        return new Clothes(cloth);
+    }
 }

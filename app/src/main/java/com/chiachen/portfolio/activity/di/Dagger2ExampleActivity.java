@@ -16,6 +16,9 @@ public class Dagger2ExampleActivity extends AppCompatActivity {
     @Inject
     Shoe mShoe;
 
+    @Inject
+    Clothes mClothes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +30,6 @@ public class Dagger2ExampleActivity extends AppCompatActivity {
                                 .build();
 
         build.inject(this);
-        ((TextView) findViewById(R.id._text)).setText("我现在有" + mCloth + "和" + mShoe);
-
-
+        ((TextView) findViewById(R.id._text)).setText("我现在有" + mCloth + "和" + mShoe+"   "+mClothes);
     }
 }
