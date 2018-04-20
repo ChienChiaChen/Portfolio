@@ -1,5 +1,7 @@
 package com.chiachen.portfolio.activity.di;
 
+import javax.inject.Named;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -13,6 +15,22 @@ public class MainModule {
     public Cloth getCloth() {
         Cloth cloth = new Cloth();
         cloth.setColor("RED");
+        return cloth;
+    }
+
+    @Provides
+    @Named("red")
+    public Cloth getRedCloth() {
+        Cloth cloth = new Cloth();
+        cloth.setColor("Red");
+        return cloth;
+    }
+
+    @Provides
+    @Named("blue")
+    public Cloth getBlueCloth() {
+        Cloth cloth = new Cloth();
+        cloth.setColor("Blue");
         return cloth;
     }
 
