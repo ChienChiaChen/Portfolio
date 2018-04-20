@@ -1,6 +1,7 @@
 package com.chiachen.portfolio.activity.di;
 
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
@@ -11,6 +12,7 @@ import dagger.Provides;
 
 @Module
 public class MainModule {
+    @Singleton
     @Provides
     public Cloth getCloth() {
         Cloth cloth = new Cloth();

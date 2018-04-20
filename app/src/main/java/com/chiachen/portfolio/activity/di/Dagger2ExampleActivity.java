@@ -40,6 +40,8 @@ public class Dagger2ExampleActivity extends AppCompatActivity {
 
         build.inject(this);
         // ((TextView) findViewById(R.id._text)).setText("我现在有" + mCloth + "和" + mShoe+"   "+mClothes);
-        ((TextView) findViewById(R.id._text)).setText( mRedCloth + "和" + mblueCloth);
+        // ((TextView) findViewById(R.id._text)).setText( mRedCloth + "和" + mblueCloth);
+        ((TextView) findViewById(R.id._text)).setText("redCloth = clothes中的cloth嗎?:" + (mCloth == mClothes.getCloth()));
+
     }
 }
