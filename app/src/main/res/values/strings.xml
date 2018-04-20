@@ -85,4 +85,5 @@
     </string-array>
 
     <string name="track_leaks">Check memory leak</string>
+    <string name="event_bus_main_title">20. EventBus Main</string>
 </resources>

@@ -90,6 +90,10 @@
         </activity>
         <activity android:name=".activity.ContinuousDownloadActivity">
         </activity>
+        <activity android:name=".activity.eventbus.EventBusMainActivity">
+        </activity>
+        <activity android:name=".activity.eventbus.EventBusSecondActivity">
+        </activity>
     </application>
 
 </manifest>
