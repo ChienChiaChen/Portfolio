@@ -13,6 +13,9 @@ public class Dagger2ExampleActivity extends AppCompatActivity {
     @Inject
     Cloth mCloth;
 
+    @Inject
+    Shoe mShoe;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +27,7 @@ public class Dagger2ExampleActivity extends AppCompatActivity {
                                 .build();
 
         build.inject(this);
-        ((TextView) findViewById(R.id._text)).setText(mCloth.getColor());
+        ((TextView) findViewById(R.id._text)).setText("我现在有" + mCloth + "和" + mShoe);
 
 
     }
