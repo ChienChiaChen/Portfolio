@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.chiachen.portfolio.R;
+import com.chiachen.portfolio.activity.di.Dagger2ExampleActivity;
 import com.chiachen.portfolio.activity.eventbus.EventBusMainActivity;
 import com.chiachen.portfolio.activity.page.RoutingPageAActivity;
 import com.chiachen.portfolio.activity.rxjava.RxJavaExampleActivity;
@@ -96,5 +97,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void openEventBusMainPage(View view) {
         startActivity(new Intent(MainActivity.this, EventBusMainActivity.class));
+    }
+
+    public void openDagger2Example(View view) {
+        startActivity(new Intent(MainActivity.this, Dagger2ExampleActivity.class));
     }
 }
