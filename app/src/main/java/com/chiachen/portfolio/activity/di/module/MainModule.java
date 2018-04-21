@@ -1,7 +1,6 @@
 package com.chiachen.portfolio.activity.di.module;
 
 import com.chiachen.portfolio.activity.di.Cloth;
-import com.chiachen.portfolio.activity.di.ClothHandler;
 import com.chiachen.portfolio.activity.di.annotation.PerActivity;
 
 import dagger.Module;
@@ -50,9 +49,9 @@ public class MainModule {
         return cloth;
     }
 
-    @PerActivity
-    @Provides
-    public ClothHandler getClothHandler(){
-        return new ClothHandler();
-    }
+    // @PerActivity
+    // @Provides
+    // public ClothHandler getClothHandler(){
+    //     return new ClothHandler();
+    // }
 }

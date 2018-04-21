@@ -11,7 +11,7 @@ import dagger.Component;
  */
 
 @PerActivity
-@Component(modules = SecondModule.class)
+@Component(modules = SecondModule.class, dependencies = _BaseComponent.class)
 public interface SecondComponent {
     void inject(SecondActivity secondActivity);
 }

@@ -10,9 +10,12 @@ import com.chiachen.portfolio.R;
 import com.chiachen.portfolio.activity.di.component.DaggerMainComponent;
 import com.chiachen.portfolio.activity.di.component.MainComponent;
 import com.chiachen.portfolio.activity.di.module.MainModule;
+import com.chiachen.portfolio.global.BaseApplication;
 
 import javax.inject.Inject;
 
+
+//http://www.apkbus.com/blog-705730-62505.html
 public class Dagger2ExampleActivity extends AppCompatActivity {
 
     // @Inject
@@ -44,6 +47,7 @@ public class Dagger2ExampleActivity extends AppCompatActivity {
 
         MainComponent build = DaggerMainComponent
                                 .builder()
+                                ._BaseComponent(((BaseApplication) getApplication()).getBaseComponent())
                                 .mainModule(new MainModule())
                                 .build();
 

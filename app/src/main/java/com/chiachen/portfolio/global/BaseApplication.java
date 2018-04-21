@@ -2,6 +2,8 @@ package com.chiachen.portfolio.global;
 
 import android.app.Application;
 
+import com.chiachen.portfolio.activity.di.component.*;
+import com.chiachen.portfolio.activity.di.module.BaseModule;
 import com.facebook.stetho.Stetho;
 
 /**
@@ -13,6 +15,8 @@ public class BaseApplication extends Application {
     public static BaseApplication sInstance;
     private static BaseGraph sDemoGraph;
 
+    private _BaseComponent baseComponent;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -20,6 +24,7 @@ public class BaseApplication extends Application {
         buildComponentAndInject();
 
         ResourceService.init(getApplicationContext());
+        baseComponent = Dagger_BaseComponent.builder().baseModule(new BaseModule()).build();
 
         Stetho.initialize(
                 Stetho.newInitializerBuilder(this)
@@ -34,5 +39,9 @@ public class BaseApplication extends Application {
 
     public static BaseGraph component() {
         return sDemoGraph;
+    }
+
+    public _BaseComponent getBaseComponent() {
+        return baseComponent;
     }
 }

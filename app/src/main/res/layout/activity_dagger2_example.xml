@@ -17,6 +17,7 @@
         android:textColor="@android:color/black"
         android:textSize="30sp"
         android:layout_centerInParent="true"
+        android:onClick="goToNextPage"
         />
 
 </RelativeLayout>

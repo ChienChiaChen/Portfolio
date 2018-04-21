@@ -8,6 +8,7 @@ import com.chiachen.portfolio.R;
 import com.chiachen.portfolio.activity.di.component.DaggerSecondComponent;
 import com.chiachen.portfolio.activity.di.component.SecondComponent;
 import com.chiachen.portfolio.activity.di.module.SecondModule;
+import com.chiachen.portfolio.global.BaseApplication;
 
 import javax.inject.Inject;
 
@@ -22,7 +23,11 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        SecondComponent component = DaggerSecondComponent.builder().secondModule(new SecondModule()).build();
+        SecondComponent component = DaggerSecondComponent
+                                    .builder()
+                                    ._BaseComponent(((BaseApplication) getApplication()).getBaseComponent())
+                                    .secondModule(new SecondModule()).build();
+
         component.inject(this);
         ((TextView) findViewById(R.id._text)).setText(""+clothHandler.handle(blueCloth)+"  -> \naddr  :"+clothHandler);
     }
