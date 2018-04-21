@@ -96,6 +96,8 @@
         </activity>
         <activity android:name=".activity.di.Dagger2ExampleActivity">
         </activity>
+        <activity android:name=".activity.di.SecondActivity">
+        </activity>
     </application>
 
 </manifest>
