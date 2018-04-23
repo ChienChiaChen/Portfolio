@@ -87,4 +87,5 @@
     <string name="track_leaks">Check memory leak</string>
     <string name="event_bus_main_title">20. EventBus Main</string>
     <string name="dagger2_example">21. Dagger2 example</string>
+    <string name="recycler_view_example">22. My recycler view</string>
 </resources>

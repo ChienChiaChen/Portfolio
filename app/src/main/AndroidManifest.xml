@@ -98,6 +98,8 @@
         </activity>
         <activity android:name=".activity.di.SecondActivity">
         </activity>
+        <activity android:name=".activity.RecyclerViewExampleActivity">
+        </activity>
     </application>
 
 </manifest>

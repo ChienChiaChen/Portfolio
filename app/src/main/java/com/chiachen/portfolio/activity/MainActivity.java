@@ -102,4 +102,8 @@ public class MainActivity extends AppCompatActivity {
     public void openDagger2Example(View view) {
         startActivity(new Intent(MainActivity.this, Dagger2ExampleActivity.class));
     }
+
+    public void openMyRecyclerView(View view) {
+        startActivity(new Intent(MainActivity.this, RecyclerViewExampleActivity.class));
+    }
 }
