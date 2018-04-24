@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.chiachen.portfolio.R;
 import com.chiachen.portfolio.adapter.custom_adapter.MyAdapter;
+import com.chiachen.portfolio.adapter.custom_adapter.MyDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,8 +32,9 @@ public class RecyclerViewExampleActivity extends AppCompatActivity {
         mMyAdapter = new MyAdapter(mList);
         mRecyclerView.setAdapter(mMyAdapter);
 
-        setHeaderView(mRecyclerView);
-        setFooterView(mRecyclerView);
+        // setHeaderView(mRecyclerView);
+        // setFooterView(mRecyclerView);
+        mRecyclerView.addItemDecoration(new MyDecoration(this, MyDecoration.VERTICAL_LIST));
     }
 
 

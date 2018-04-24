@@ -76,7 +76,7 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (getItemViewType(position) == TYPE_NORMAL) {
             if (holder instanceof ListHolder) {
-                ((ListHolder) holder).tv.setText(mDatas.get(position - 1));
+                ((ListHolder) holder).tv.setText(mDatas.get(position ));
                 return;
             }
             return;
@@ -98,7 +98,7 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             if (itemView == mFooterView) {
                 return;
             }
-            tv = (TextView) itemView.findViewById(R.id.item);
+            tv = (TextView) itemView.findViewById(R.id.list_item);
         }
 
     }
