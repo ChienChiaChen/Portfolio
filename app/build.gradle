@@ -66,4 +66,6 @@ dependencies {
 
     compile 'org.greenrobot:eventbus:3.1.1'
 
+    compile 'com.jsibbold:zoomage:1.1.0'
+
 }
