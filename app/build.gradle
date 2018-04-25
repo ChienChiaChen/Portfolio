@@ -9,6 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -67,5 +68,5 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.1.1'
 
     compile 'com.jsibbold:zoomage:1.1.0'
-
+    compile 'com.github.blocoio:faker:1.2.5'
 }
