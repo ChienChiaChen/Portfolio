@@ -6,6 +6,8 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.chiachen.portfolio.R;
@@ -23,8 +25,29 @@ public class ViewTestActivity extends AppCompatActivity {
         mTvText = (TextView) findViewById(R.id.main_tv_text);
         showTotal();
         setupGestureDetector();
+    }
 
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        showLocation();
+    }
 
+    private void showLocation() {
+        ViewGroup mTvViewGroup = findViewById(R.id.main_tv_view_group);
+        mTvViewGroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        String content = "ViewGroup\n";
+        content += "Left: " + mTvViewGroup.getLeft() + ", Right: " + mTvViewGroup.getRight()
+                + "\nTop: " + mTvViewGroup.getTop() + ", Bottom: " + mTvViewGroup.getBottom()
+                + "\nX: " + mTvViewGroup.getX() + ", Y: " + mTvViewGroup.getY()
+                + "\nTranslationX: " + mTvViewGroup.getTranslationX() + ", TranslationY: " + mTvViewGroup.getTranslationY();
+        ((TextView) findViewById(R.id.view_group_tv_text)).setText(content);
     }
 
     private void setupGestureDetector() {
