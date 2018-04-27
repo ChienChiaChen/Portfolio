@@ -2,58 +2,46 @@ package com.chiachen.portfolio.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import com.chiachen.portfolio.R;
-import com.chiachen.portfolio.network.RetrofitFactory;
-import com.chiachen.portfolio.network.SchedulersTransformer;
+import com.chiachen.portfolio.base._MVPActivity;
+import com.chiachen.portfolio.base._MainPresenter;
+import com.chiachen.portfolio.base._MainView;
 import com.chiachen.portfolio.network.response.Repo;
-import com.chiachen.portfolio.network.service.GitHubService;
-import com.chiachen.portfolio.network.subscribers.ProgressSubscriber;
-import com.chiachen.portfolio.network.subscribers.SubscriberOnNextListener;
 
 import java.util.ArrayList;
 
 
 // Refer to: https://gank.io/post/56e80c2c677659311bed9841
-public class RxJavaRetrofitActivity extends BaseActivity {
+// Refer to:
+public class RxJavaRetrofitActivity extends _MVPActivity<_MainPresenter> implements _MainView {
 
-    private Button mClickMe;
-    private TextView mResult;
-    private SubscriberOnNextListener<ArrayList<Repo>> mOnNextListener;
+    @Override
+    protected _MainPresenter createPresenter() {
+        return new _MainPresenter(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rx_java_retrofit);
-        mResult = findViewById(R.id.result_text);
-        mClickMe = findViewById(R.id.click_me);
 
-        mClickMe.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.click_me).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getMovie();
+                mPresenter.loadData("JasonChienPrenetics");
             }
         });
-
-        mOnNextListener = new SubscriberOnNextListener<ArrayList<Repo>>() {
-            @Override
-            public void onNext(ArrayList<Repo> subjects) {
-                StringBuilder stringBuffer = new StringBuilder();
-                for (Repo subject : subjects) {
-                    stringBuffer.append(subject.language);
-                    stringBuffer.append("\n");
-                }
-                mResult.setText(stringBuffer.toString());
-            }
-        };
     }
 
-    public void getMovie() {
-        RetrofitFactory.getInstance().create(GitHubService.class)
-                .getRepoData("JasonChienPrenetics")
-                .compose(SchedulersTransformer.<ArrayList<Repo>>ioToMain())
-                .subscribe(new ProgressSubscriber<>(this, this, mOnNextListener));
+    @Override
+    public void getDataSuccess(ArrayList<Repo> model) {
+        Toast.makeText(RxJavaRetrofitActivity.this, "Success", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void getDataFail(String msg) {
+        Toast.makeText(RxJavaRetrofitActivity.this, msg, Toast.LENGTH_SHORT).show();
     }
 }
