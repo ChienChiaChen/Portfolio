@@ -30,7 +30,9 @@
         </activity>
         <activity android:name=".activity.MVPPracticeActivity">
         </activity>
-        <activity android:name=".activity.RxJavaRetrofitActivity">
+        <activity
+            android:theme="@style/_AppTheme"
+            android:name=".activity.RxJavaRetrofitActivity">
         </activity>
         <activity android:name=".activity.CustomImageActivity">
         </activity>

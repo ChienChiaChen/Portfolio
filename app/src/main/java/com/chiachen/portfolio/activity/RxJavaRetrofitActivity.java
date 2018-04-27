@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 
 // Refer to: https://gank.io/post/56e80c2c677659311bed9841
-// Refer to:
+// Refer to: https://github.com/WuXiaolong/AndroidMVPSample/blob/master/app/src/main/java/com/wuxiaolong/androidmvpsample/ui/MainActivity.java
 public class RxJavaRetrofitActivity extends _MVPActivity<_MainPresenter> implements _MainView {
 
     @Override
@@ -26,7 +26,7 @@ public class RxJavaRetrofitActivity extends _MVPActivity<_MainPresenter> impleme
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rx_java_retrofit);
-
+        initToolBarAsHome(RxJavaRetrofitActivity.class.getSimpleName());
         findViewById(R.id.click_me).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
