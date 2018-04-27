@@ -23,6 +23,14 @@ public class ServiceActivity extends AppCompatActivity {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             mService = ((MyService.MyBinder) service).getService();
+            if (null != mService) {
+                mService.setCallback(new MyService.CallBack() {
+                    @Override
+                    public void onShowChanged(String show) {
+                        Log.e("JASON_CHIEN", "\n" + show);
+                    }
+                });
+            }
             Log.d(TAG, "ServiceActivity onServiceConnected");
         }
 
@@ -37,22 +45,23 @@ public class ServiceActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.button1:{
+                case R.id.button1: {
                     Intent serviceIntent = new Intent(ServiceActivity.this, MyService.class);
                     ServiceActivity.this.bindService(serviceIntent, connection, Context.BIND_AUTO_CREATE);
                     break;
                 }
 
-                case R.id.button2:{
+                case R.id.button2: {
+                    if (null == mService) break;
                     mService.test();
                     break;
                 }
 
-                case R.id.button3:{
+                case R.id.button3: {
                     try {
                         ServiceActivity.this.unbindService(connection);
                     } catch (Exception e) {
-                        Log.e("JASON_CHIEN", "\n"+e.getMessage());
+                        Log.e("JASON_CHIEN", "\n" + e.getMessage());
                     }
                     break;
                 }
