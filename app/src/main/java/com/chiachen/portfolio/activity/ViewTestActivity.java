@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.chiachen.portfolio.R;
 
+import io.bloco.faker.Faker;
+
 public class ViewTestActivity extends AppCompatActivity {
 
     private String mContent;
@@ -34,11 +36,14 @@ public class ViewTestActivity extends AppCompatActivity {
     }
 
     private void showLocation() {
+        final Faker faker = new Faker();
         ViewGroup mTvViewGroup = findViewById(R.id.main_tv_view_group);
         mTvViewGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                for (int i = 0; i < 10; i++) {
+                    Log.e("JASON_CHIEN", "\n"+faker.internet.email());
+                }
             }
         });
 
