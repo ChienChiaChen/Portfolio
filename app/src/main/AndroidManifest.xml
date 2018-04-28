@@ -31,8 +31,8 @@
         <activity android:name=".activity.MVPPracticeActivity">
         </activity>
         <activity
-            android:theme="@style/_AppTheme"
-            android:name=".activity.RxJavaRetrofitActivity">
+            android:name=".activity.RxJavaRetrofitActivity"
+            android:theme="@style/_AppTheme">
         </activity>
         <activity android:name=".activity.CustomImageActivity">
         </activity>
@@ -67,7 +67,6 @@
         <activity android:name=".activity.rxjava.ThrottleActivity">
         </activity>
         <activity android:name=".activity.ServiceActivity">
-
         </activity>
 
         <service
@@ -104,7 +103,9 @@
         <activity android:name=".activity.RecyclerViewExampleActivity">
         </activity>
         <activity android:name=".activity.ViewTestActivity">
-
+        </activity>
+        <activity android:theme="@style/_AppTheme"
+                  android:name=".activity.FragmentTabHostActivity">
         </activity>
     </application>
 

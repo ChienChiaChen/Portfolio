@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private RecyclerViewHomeAdapter mRecyclerViewHomeAdapter;
-    private static Map<Integer, String> mMap;
+    private static Map<Integer, String> sMap;
 
     private OnItemClickListener mOnItemClickListener = new OnItemClickListener() {
         @Override
@@ -118,6 +118,9 @@ public class MainActivity extends AppCompatActivity {
                     openMyRecyclerView(view);
                     break;
                 }
+                case 22:{
+                    openFragmentTabHost(view);
+                }
             }
         }
 
@@ -135,13 +138,13 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.layout_recycler_view);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        mRecyclerViewHomeAdapter = new RecyclerViewHomeAdapter(this, mMap);
+        mRecyclerViewHomeAdapter = new RecyclerViewHomeAdapter(this, sMap);
         mRecyclerView.setAdapter(mRecyclerViewHomeAdapter);
         mRecyclerViewHomeAdapter.setOnItemClickListener(mOnItemClickListener);
     }
 
     private void prepareItemName() {
-        mMap = new LinkedHashMap<Integer, String>() {{
+        sMap = new LinkedHashMap<Integer, String>() {{
             put(0, getString(R.string.progress_button));
             put(1, getString(R.string.edit_text_button));
             put(2, getString(R.string.bottom_tab));
@@ -164,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
             put(19, getString(R.string.event_bus_main_title));
             put(20, getString(R.string.dagger2_example));
             put(21, getString(R.string.recycler_view_example));
+            put(22, getString(R.string.fragment_tab_host));
         }};
     }
 
@@ -253,5 +257,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void openMyRecyclerView(View view) {
         startActivity(new Intent(MainActivity.this, RecyclerViewExampleActivity.class));
+    }
+
+    public void openFragmentTabHost(View view) {
+        startActivity(new Intent(MainActivity.this, FragmentTabHostActivity.class));
     }
 }

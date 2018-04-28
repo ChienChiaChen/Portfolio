@@ -18,4 +18,9 @@
 
     <color name="regard_container_bkg">#303030</color>
     <color name="regard_image_bkg">#292929</color>
+
+    <!---->
+    <color name="pedo_actionbar_divider">#CECECE</color>
+    <color name="pedo_actionbar_bkg">#F8F8F8</color>
+    <!---->
 </resources>
