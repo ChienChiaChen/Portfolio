@@ -15,7 +15,10 @@ public abstract class _MVPActivity<P extends _BasePresenter> extends _BaseActivi
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPresenter = createPresenter();
+        initUI();
     }
+
+    protected abstract void initUI();
 
     @Override
     protected void onDestroy() {
