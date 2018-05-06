@@ -25,6 +25,10 @@ public class RxJavaRetrofitActivity extends _MVPActivity<_MainPresenter> impleme
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    protected void initUI() {
         setContentView(R.layout.activity_rx_java_retrofit);
         initToolBarAsHome(RxJavaRetrofitActivity.class.getSimpleName());
         findViewById(R.id.click_me).setOnClickListener(new View.OnClickListener() {
