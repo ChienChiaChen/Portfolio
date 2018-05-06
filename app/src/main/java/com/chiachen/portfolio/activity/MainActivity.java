@@ -121,6 +121,9 @@ public class MainActivity extends AppCompatActivity {
                 case 22:{
                     openFragmentTabHost(view);
                 }
+                case 23:{
+                    openCountryWall(view);
+                }
             }
         }
 
@@ -168,6 +171,7 @@ public class MainActivity extends AppCompatActivity {
             put(20, getString(R.string.dagger2_example));
             put(21, getString(R.string.recycler_view_example));
             put(22, getString(R.string.fragment_tab_host));
+            put(23, getString(R.string.countrywall));
         }};
     }
 
@@ -261,5 +265,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void openFragmentTabHost(View view) {
         startActivity(new Intent(MainActivity.this, FragmentTabHostActivity.class));
+    }
+
+    public void openCountryWall(View view) {
+        startActivity(new Intent(MainActivity.this, CountryWallActivity.class));
     }
 }

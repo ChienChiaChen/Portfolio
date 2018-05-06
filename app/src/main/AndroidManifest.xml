@@ -104,8 +104,11 @@
         </activity>
         <activity android:name=".activity.ViewTestActivity">
         </activity>
-        <activity android:theme="@style/_AppTheme"
-                  android:name=".activity.FragmentTabHostActivity">
+        <activity
+            android:name=".activity.FragmentTabHostActivity"
+            android:theme="@style/_AppTheme">
+        </activity>
+        <activity android:name=".activity.CountryWallActivity">
         </activity>
     </application>
 
