@@ -23,11 +23,11 @@ public class _BasePresenter<V> {
     }
 
     public boolean isViewAttached() {
-        return null != getView();
+        return null != mView && null != mView.get();
     }
 
     public V getView() {
-        return (null == mView) ? null : mView.get();
+        return this.isViewAttached() ? null : mView.get();
     }
 
     public void detachView() {
