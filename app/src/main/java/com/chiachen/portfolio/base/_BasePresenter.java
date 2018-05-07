@@ -27,7 +27,7 @@ public class _BasePresenter<V> {
     }
 
     public V getView() {
-        return this.isViewAttached() ? null : mView.get();
+        return this.isViewAttached() ? mView.get():null;
     }
 
     public void detachView() {

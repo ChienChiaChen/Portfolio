@@ -113,19 +113,21 @@ public class MainActivity extends AppCompatActivity {
                     openDagger2Example(view);
                     break;
                 }
-
                 case 21: {
                     openMyRecyclerView(view);
                     break;
                 }
                 case 22:{
                     openFragmentTabHost(view);
+                    break;
                 }
                 case 23:{
                     openCountryWall(view);
+                    break;
                 }
                 case 24:{
                     openRecyclerMixView(view);
+                    break;
                 }
             }
         }
