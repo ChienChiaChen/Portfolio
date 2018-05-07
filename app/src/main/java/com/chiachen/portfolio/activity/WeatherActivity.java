@@ -10,7 +10,7 @@ import com.chiachen.portfolio.base._MVPActivity;
 import com.chiachen.portfolio.presenter.CountryWallPresenter;
 import com.chiachen.portfolio.view.CountryWallView;
 
-public class CountryWallActivity extends _MVPActivity<CountryWallPresenter> implements CountryWallView {
+public class WeatherActivity extends _MVPActivity<CountryWallPresenter> implements CountryWallView {
 
     private RecyclerView mRecyclerView;
     private ProgressBar mProgressBar;
@@ -22,7 +22,7 @@ public class CountryWallActivity extends _MVPActivity<CountryWallPresenter> impl
 
     @Override
     protected void initUI() {
-        setContentView(R.layout.activity_country_wall);
+        setContentView(R.layout.activity_weather);
         mRecyclerView = findViewById(R.id.recycler_view);
         mProgressBar = findViewById(R.id.progress);
     }

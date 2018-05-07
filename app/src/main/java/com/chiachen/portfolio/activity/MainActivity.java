@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
                 case 24:{
-                    openRecyclerMixView(view);
+                    openWeather(view);
                     break;
                 }
             }
@@ -274,10 +274,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openCountryWall(View view) {
-        startActivity(new Intent(MainActivity.this, CountryWallActivity.class));
+        startActivity(new Intent(MainActivity.this, WeatherActivity.class));
     }
 
-    public void openRecyclerMixView(View view) {
+    public void openWeather(View view) {
         startActivity(new Intent(MainActivity.this, RecyclerMixViewActivity.class));
     }
 }
