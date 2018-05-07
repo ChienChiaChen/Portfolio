@@ -110,6 +110,8 @@
         </activity>
         <activity android:name=".activity.CountryWallActivity">
         </activity>
+        <activity android:name=".activity.RecyclerMixViewActivity">
+        </activity>
     </application>
 
 </manifest>
