@@ -29,9 +29,19 @@ public class RetrofitFactory {
                 .build();
     }
 
+    public RetrofitFactory changeBaseUrl(String newApiBaseUrl) {
+        mRetrofit = new Retrofit.Builder()
+                .baseUrl(newApiBaseUrl)
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .client(getCustomOkHttpClient())
+                .build();
+
+        return sRetrofitFactory;
+    }
+
     public <T> T create(Class<T> clazz) {
         ObjectHelper.requireNonNull(mRetrofit, "Retrofit is null");
-
         return mRetrofit.create(clazz);
     }
 
