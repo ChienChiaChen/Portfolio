@@ -90,4 +90,5 @@
     <string name="recycler_view_example">22. My recycler view</string>
     <string name="fragment_tab_host"><![CDATA[23. FragmentTabHost ->4.0]]></string>
     <string name="countrywall">24. Country wall</string>
+    <string name="mix_recycler_view">25. Mix recyclerview</string>
 </resources>

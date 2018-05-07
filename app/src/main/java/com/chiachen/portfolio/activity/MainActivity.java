@@ -124,6 +124,9 @@ public class MainActivity extends AppCompatActivity {
                 case 23:{
                     openCountryWall(view);
                 }
+                case 24:{
+                    openRecyclerMixView(view);
+                }
             }
         }
 
@@ -172,6 +175,7 @@ public class MainActivity extends AppCompatActivity {
             put(21, getString(R.string.recycler_view_example));
             put(22, getString(R.string.fragment_tab_host));
             put(23, getString(R.string.countrywall));
+            put(24, getString(R.string.mix_recycler_view));
         }};
     }
 
@@ -270,4 +274,9 @@ public class MainActivity extends AppCompatActivity {
     public void openCountryWall(View view) {
         startActivity(new Intent(MainActivity.this, CountryWallActivity.class));
     }
+
+    public void openRecyclerMixView(View view) {
+        startActivity(new Intent(MainActivity.this, RecyclerMixViewActivity.class));
+    }
 }
+// public class RecyclerMixViewActivity extends AppCompatActivity {
