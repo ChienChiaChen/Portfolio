@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
             put(20, getString(R.string.dagger2_example));
             put(21, getString(R.string.recycler_view_example));
             put(22, getString(R.string.fragment_tab_host));
-            put(23, getString(R.string.countrywall));
+            put(23, getString(R.string.weather));
             put(24, getString(R.string.mix_recycler_view));
         }};
     }
