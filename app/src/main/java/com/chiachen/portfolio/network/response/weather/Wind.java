@@ -13,14 +13,14 @@ public class Wind {
     public Float speed;
     @SerializedName("deg")
     @Expose
-    public Integer deg;
+    public Double deg;
 
     public Wind withSpeed(Float speed) {
         this.speed = speed;
         return this;
     }
 
-    public Wind withDeg(Integer deg) {
+    public Wind withDeg(Double deg) {
         this.deg = deg;
         return this;
     }
