@@ -57,7 +57,7 @@ public class Dagger2ExampleActivity extends AppCompatActivity {
         // ((TextView) findViewById(R.id._text)).setText("redCloth = clothes中的cloth嗎?:" + (mCloth == mClothes.getCloth()));
 
 
-        ((TextView) findViewById(R.id._text)).setText(""+clothHandler.handle(redCloth)+"  -> \naddr  :"+clothHandler);
+        ((TextView) findViewById(R.id._text)).setText("" + clothHandler.handle(redCloth) + "  -> \naddr  :" + clothHandler);
 
     }
 
