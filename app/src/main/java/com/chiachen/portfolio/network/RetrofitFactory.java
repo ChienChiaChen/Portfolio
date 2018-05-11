@@ -1,7 +1,9 @@
 package com.chiachen.portfolio.network;
 
+import com.chiachen.portfolio.global.ResourceService;
 import com.chiachen.portfolio.network.config.BaseUrls;
 import com.chiachen.portfolio.network.config.HttpConfig;
+import com.readystatesoftware.chuck.ChuckInterceptor;
 
 import java.util.concurrent.TimeUnit;
 
@@ -59,6 +61,7 @@ public class RetrofitFactory {
     public static OkHttpClient getCustomOkHttpClient() {
         return new OkHttpClient.Builder()
                 .addInterceptor(InterceptorUtil.getLoggingInterceptor())
+                .addInterceptor(new ChuckInterceptor(ResourceService.getContext()))
                 .addNetworkInterceptor(InterceptorUtil.getStethoInterceptor())
                 .retryOnConnectionFailure(HttpConfig.NEED_TO_RETRY)
                 .writeTimeout(HttpConfig.DEFAULT_TIMEOUT, TimeUnit.SECONDS)
