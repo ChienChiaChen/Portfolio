@@ -34,6 +34,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/MyAnimation.Window</item>
     </style>
 
     <style name="AppTheme.NoActionBar__" parent="Theme.AppCompat.Light.NoActionBar">
@@ -53,4 +54,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!--Ref. https://stackoverflow.com/questions/13402782/show-dialogfragment-with-animation-growing-from-a-point?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa-->
+    <style name="MyAnimation.Window" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/panel_slide_from_bottom_no_fill</item>
+        <item name="android:windowExitAnimation">@anim/panel_slide_to_bottom_no_fill</item>
+    </style>
 </resources>
