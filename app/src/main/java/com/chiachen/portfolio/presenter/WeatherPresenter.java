@@ -34,10 +34,14 @@ public class WeatherPresenter extends _BasePresenter<WeatherView> {
 
     public void loadData(String cityName) {
         getView().showLoading();
-        addSubscription(RetrofitFactory.getInstance()
+        addSubscription(getObservable(cityName), getObserver());
+    }
+
+    private Observable<WeatherResponse> getObservable(String cityName) {
+        return RetrofitFactory.getInstance()
                         .changeBaseUrl(BaseUrls.OPEN_WEATHER_BASE_URL)
                         .create(WeatherService.class)
-                        .requestWeatherFromCity(cityName, WeatherService.APP_KEY), getObserver());
+                        .requestWeatherFromCity(cityName, WeatherService.APP_KEY);
     }
 
     public void getResultsBasedOnQuery(SearchView searchView) {
@@ -57,9 +61,7 @@ public class WeatherPresenter extends _BasePresenter<WeatherView> {
                 .switchMap(new Function<String, ObservableSource<WeatherResponse>>() {
                     @Override
                     public Observable<WeatherResponse> apply(@NonNull String s) throws Exception {
-                        return RetrofitFactory.getInstance()
-                                .changeBaseUrl(BaseUrls.OPEN_WEATHER_BASE_URL)
-                                .create(WeatherService.class).requestWeatherFromCity(s,WeatherService.APP_KEY);
+                        return getObservable(s);
                     }
                 });
     }

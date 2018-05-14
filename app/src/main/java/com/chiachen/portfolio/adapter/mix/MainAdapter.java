@@ -84,7 +84,6 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     public class HorizontalViewHolder extends RecyclerView.ViewHolder {
-
         RecyclerView recyclerView;
 
         HorizontalViewHolder(View itemView) {

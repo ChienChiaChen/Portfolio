@@ -17,7 +17,6 @@ public class _MainPresenter extends _BasePresenter<_MainView> {
         attachView(mainView);
     }
 
-
     public void loadData(String username) {
         if (isViewAttached()) {
             getView().showLoading();
