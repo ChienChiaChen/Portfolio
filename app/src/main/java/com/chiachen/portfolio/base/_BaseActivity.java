@@ -15,6 +15,7 @@ import com.chiachen.portfolio.R;
  * Created by jianjiacheng on 27/04/2018.
  */
 
+// https://github.com/WuXiaolong/AndroidMVPSample/blob/master/app/src/main/java/com/wuxiaolong/androidmvpsample/mvp/other/MvpFragment.java
 public abstract class _BaseActivity extends AppCompatActivity {
     public Activity mActivity;
 
