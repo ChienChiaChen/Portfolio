@@ -55,6 +55,14 @@
             android:textAllCaps="false"
             android:textColor="@android:color/black"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openMergeActivity"
+            android:text="@string/merge"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"/>
+
     </LinearLayout>
 
 </ScrollView>

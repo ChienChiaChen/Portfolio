@@ -62,6 +62,7 @@
     <string name="bottom_alert">Alert</string>
     <string name="bottom_dialer">Dialer</string>
     <string name="throttle">5. throttle</string>
+    <string name="merge">6. Merge example</string>
     <string name="routing_page">17. Routing page</string>
     <string name="drawer">18. Drawer</string>
 

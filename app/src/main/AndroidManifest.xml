@@ -111,9 +111,11 @@
         <activity android:name=".activity.WeatherActivity">
             <meta-data
                 android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
+                android:resource="@xml/searchable"/>
         </activity>
         <activity android:name=".activity.RecyclerMixViewActivity">
+        </activity>
+        <activity android:name=".activity.rxjava.MergeExampleActivity">
         </activity>
     </application>
 
