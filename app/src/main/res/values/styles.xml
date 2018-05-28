@@ -59,4 +59,10 @@
         <item name="android:windowEnterAnimation">@anim/panel_slide_from_bottom_no_fill</item>
         <item name="android:windowExitAnimation">@anim/panel_slide_to_bottom_no_fill</item>
     </style>
+
+    <style name="Button.ImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:padding">5dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:background">@null</item>
+    </style>
 </resources>
