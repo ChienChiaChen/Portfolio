@@ -133,6 +133,10 @@ public class MainActivity extends AppCompatActivity {
                 case 25:{
                     openFragmentWithAnim(view);
                 }
+
+                case 26:{
+                    openActivityTransition(view);
+                }
             }
         }
 
@@ -183,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
             put(23, getString(R.string.weather));
             put(24, getString(R.string.mix_recycler_view));
             put(25, getString(R.string.fragment_with_anim));
+            put(26, getString(R.string.activity_transition_1));
         }};
     }
 
@@ -288,6 +293,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void openFragmentWithAnim(View view) {
         startActivity(new Intent(MainActivity.this, FragmentWithAnimActivity.class));
+    }
+
+    private void openActivityTransition(View view) {
+        startActivity(new Intent(MainActivity.this, GestureDetectorActivity.class));
     }
 }
 // public class RecyclerMixViewActivity extends AppCompatActivity {

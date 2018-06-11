@@ -117,11 +117,12 @@
         </activity>
         <activity android:name=".activity.rxjava.MergeExampleActivity">
         </activity>
-
-        <activity android:name=".activity.FragmentWithAnimActivity"
-                  android:theme="@style/_AppTheme">
+        <activity
+            android:name=".activity.FragmentWithAnimActivity"
+            android:theme="@style/_AppTheme">
         </activity>
-
+        <activity android:name=".activity.GestureDetectorActivity">
+        </activity>
     </application>
 
 </manifest>

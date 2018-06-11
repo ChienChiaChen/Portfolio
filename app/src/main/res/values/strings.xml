@@ -106,5 +106,6 @@
 
     <string name="blank">Blank</string>
     <string name="fragment_with_anim">26. FragmentWithAnim</string>
+    <string name="activity_transition_1">27. Activity transition 1</string>
     <!---->
 </resources>
