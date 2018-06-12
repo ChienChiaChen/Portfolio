@@ -123,6 +123,8 @@
         </activity>
         <activity android:name=".activity.GestureDetectorActivity">
         </activity>
+        <activity android:name=".activity.rxjava.ErrorHandleActivity">
+        </activity>
     </application>
 
 </manifest>

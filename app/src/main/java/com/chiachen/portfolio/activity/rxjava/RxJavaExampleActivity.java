@@ -38,4 +38,8 @@ public class RxJavaExampleActivity extends BaseActivity {
     public void openMergeActivity(View view) {
         startActivity(new Intent(RxJavaExampleActivity.this, MergeExampleActivity.class));
     }
+
+    public void openErrorHandle(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, ErrorHandleActivity.class));
+    }
 }
