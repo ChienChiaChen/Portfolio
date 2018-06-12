@@ -1,5 +1,6 @@
 package com.chiachen.portfolio.activity;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -37,6 +38,10 @@ public class RecyclerViewExampleActivity extends AppCompatActivity {
         mRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
+                mRefreshLayout.setRefreshing(false);
+                mRefreshLayout.setEnabled(false);
+
+                showProgressDialog();
                 if (!CollectionUtils.isNullOrEmpty(mList) && null != mMyAdapter){
                     Observable.timer(5, TimeUnit.SECONDS)
                             .subscribeOn(AppSchedulerProvider.io())
@@ -47,6 +52,7 @@ public class RecyclerViewExampleActivity extends AppCompatActivity {
                                     mList.add(0,"It's From Upper Refresh Layout");
                                     mMyAdapter.notifyDataSetChanged();
                                     mRefreshLayout.setRefreshing(false);
+                                    dismissProgressDialog();
                                 }
                             });
                 }
@@ -81,5 +87,27 @@ public class RecyclerViewExampleActivity extends AppCompatActivity {
     private void setFooterView(RecyclerView view){
         View footer = LayoutInflater.from(this).inflate(R.layout.item_footer, view, false);
         mMyAdapter.setFooterView(footer);
+    }
+
+    public ProgressDialog progressDialog;
+
+    public ProgressDialog showProgressDialog() {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage(getString(R.string.progress_button_downloading));
+        progressDialog.show();
+        return progressDialog;
+    }
+
+    public ProgressDialog showProgressDialog(CharSequence message) {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage(message);
+        progressDialog.show();
+        return progressDialog;
+    }
+
+    public void dismissProgressDialog() {
+        if (progressDialog != null && progressDialog.isShowing()) {
+            progressDialog.dismiss();
+        }
     }
 }
