@@ -137,6 +137,9 @@ public class MainActivity extends AppCompatActivity {
                 case 26:{
                     openActivityTransition(view);
                 }
+                case 27:{
+                    openFabAndSnackbar(view);
+                }
             }
         }
 
@@ -188,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
             put(24, getString(R.string.mix_recycler_view));
             put(25, getString(R.string.fragment_with_anim));
             put(26, getString(R.string.activity_transition_1));
+            put(27, getString(R.string.fab_and_snackbar));
         }};
     }
 
@@ -297,6 +301,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void openActivityTransition(View view) {
         startActivity(new Intent(MainActivity.this, GestureDetectorActivity.class));
+    }
+
+    private void openFabAndSnackbar(View view) {
+        startActivity(new Intent(MainActivity.this, FabAndSnackbarActivity.class));
     }
 }
 // public class RecyclerMixViewActivity extends AppCompatActivity {
