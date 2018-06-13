@@ -129,6 +129,10 @@
         </activity>
         <activity android:name=".activity.FabFollowsWidgetActivity">
         </activity>
+        <activity
+            android:name=".activity.CollapsingToolbarActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

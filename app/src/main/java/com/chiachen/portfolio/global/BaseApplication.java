@@ -1,6 +1,7 @@
 package com.chiachen.portfolio.global;
 
 import android.app.Application;
+import android.support.v7.app.AppCompatDelegate;
 
 import com.chiachen.portfolio.activity.di.component.Dagger_BaseComponent;
 import com.chiachen.portfolio.activity.di.component._BaseComponent;
@@ -26,6 +27,7 @@ public class BaseApplication extends Application {
         initResource();
         initBaseComponent();
         initStetho();
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
     }
 
     private void initResource() {

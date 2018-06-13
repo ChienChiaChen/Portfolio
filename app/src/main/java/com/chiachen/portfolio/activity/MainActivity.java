@@ -132,16 +132,24 @@ public class MainActivity extends AppCompatActivity {
 
                 case 25:{
                     openFragmentWithAnim(view);
+                    break;
                 }
 
                 case 26:{
                     openActivityTransition(view);
+                    break;
                 }
                 case 27:{
                     openFabAndSnackbar(view);
+                    break;
                 }
                 case 28:{
                     openFabFollowsWidget(view);
+                    break;
+                }
+                case 29:{
+                    openCollapsingToolbar(view);
+                    break;
                 }
             }
         }
@@ -196,6 +204,7 @@ public class MainActivity extends AppCompatActivity {
             put(26, getString(R.string.activity_transition_1));
             put(27, getString(R.string.fab_and_snackbar));
             put(28, getString(R.string.fab_follows_widget));
+            put(29, getString(R.string.collapsing_example));
 
         }};
     }
@@ -314,5 +323,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void openFabFollowsWidget(View view) {
         startActivity(new Intent(MainActivity.this, FabFollowsWidgetActivity.class));
+    }
+
+    private void openCollapsingToolbar(View view) {
+        startActivity(new Intent(MainActivity.this, CollapsingToolbarActivity.class));
     }
 }
