@@ -314,7 +314,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openActivityTransition(View view) {
-        startActivity(new Intent(MainActivity.this, GestureDetectorActivity.class));
+        Intent intent_info = new Intent(MainActivity.this,GestureDetectorActivity.class);
+        startActivity(intent_info);
+        overridePendingTransition(R.anim.slide_up_info,R.anim.no_change);
     }
 
     private void openFabAndSnackbar(View view) {
