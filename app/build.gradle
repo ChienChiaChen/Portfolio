@@ -53,7 +53,8 @@ dependencies {
     compile "com.google.code.gson:gson:${libs.gson}"
 
     // RxBinding
-    compile "com.jakewharton.rxbinding:rxbinding:${libs.rxbinding}"
+    compile "com.jakewharton.rxbinding2:rxbinding:${libs.rxbinding2}"
+    compile "com.jakewharton.rxbinding:rxbinding:${libs.rxbinding1}"
 
     compile "com.google.dagger:dagger:${libs.dagger}"// dagger2
     annotationProcessor "com.google.dagger:dagger-compiler:${libs.dagger}" // dagger2
