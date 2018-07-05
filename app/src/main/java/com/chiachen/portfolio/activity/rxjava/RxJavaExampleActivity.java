@@ -42,4 +42,8 @@ public class RxJavaExampleActivity extends BaseActivity {
     public void openErrorHandle(View view) {
         startActivity(new Intent(RxJavaExampleActivity.this, ErrorHandleActivity.class));
     }
+
+    public void openZipActivity(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, RxJavaZipActivity.class));
+    }
 }
