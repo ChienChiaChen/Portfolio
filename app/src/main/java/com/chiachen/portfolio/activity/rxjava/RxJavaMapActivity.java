@@ -1,6 +1,7 @@
 package com.chiachen.portfolio.activity.rxjava;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.chiachen.portfolio.R;
 import com.chiachen.portfolio.activity.BaseActivity;
@@ -17,14 +18,18 @@ import io.reactivex.Observable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 
+//https://www.jianshu.com/p/b39afa92807e
 public class RxJavaMapActivity extends BaseActivity {
+
+    TextView mRxOperatorsText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rx_java_map);
-        // firstExample();
-        secondExample();
+        setContentView(R.layout.activity_rx_java_create);
+        mRxOperatorsText = findViewById(R.id.text);
+        firstExample();
+        // secondExample();
     }
 
     private void firstExample() {
@@ -50,7 +55,8 @@ public class RxJavaMapActivity extends BaseActivity {
                 .subscribe(new Consumer<List<String>>() {
                     @Override
                     public void accept(List<String> list) throws Exception {
-                        logJJ("Thread: "+ Thread.currentThread().getName()+" "+list.toString());
+                        mRxOperatorsText.setText(list.toString());
+                        logJJ("Thread: " + Thread.currentThread().getName() + " " + list.toString());
                     }
                 });
     }
