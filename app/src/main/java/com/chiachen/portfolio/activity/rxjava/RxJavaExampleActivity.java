@@ -58,4 +58,9 @@ public class RxJavaExampleActivity extends BaseActivity {
     public void openFilterActivity(View view) {
         startActivity(new Intent(RxJavaExampleActivity.this, RxJavaFilterActivity.class));
     }
+
+    public void openBufferActivity(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, RxJavaBufferActivity.class));
+    }
+    //
 }

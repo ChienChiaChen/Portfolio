@@ -26,6 +26,7 @@ public class RxJavaFilterActivity extends BaseActivity {
                     @Override
                     public boolean test(@NonNull Integer integer) throws Exception {
                         return integer >= 10;
+                        // buffer
                     }
                 }).subscribe(new Consumer<Integer>() {
             @Override

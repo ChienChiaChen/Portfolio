@@ -150,6 +150,9 @@
 
         <activity android:name=".activity.rxjava.RxJavaFilterActivity">
         </activity>
+
+        <activity android:name=".activity.rxjava.RxJavaBufferActivity">
+        </activity>
     </application>
 
 </manifest>
