@@ -1,6 +1,7 @@
 package com.chiachen.portfolio.activity.rxjava;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.chiachen.portfolio.R;
 import com.chiachen.portfolio.activity.BaseActivity;
@@ -19,11 +20,13 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 
 public class RxJavaFlatMapActivity extends BaseActivity {
+    TextView mRxOperatorsText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rx_java_flat_map);
+        setContentView(R.layout.activity_rx_java_create);
+        mRxOperatorsText = findViewById(R.id.text);
         Observable.just("http://www.yahoo.com/", "http://www.google.com/", "https://www.youtube.com/")
                 .flatMap(new Function<String, ObservableSource<String>>() {
                     @Override
@@ -50,6 +53,7 @@ public class RxJavaFlatMapActivity extends BaseActivity {
                 .subscribe(new Consumer<String>() {
                     @Override
                     public void accept(String s) throws Exception {
+                        mRxOperatorsText.setText(String.format("%sAccept : value : %s\n", mRxOperatorsText.getText().toString(), s));
                         logJJ(s);
                     }
                 });
