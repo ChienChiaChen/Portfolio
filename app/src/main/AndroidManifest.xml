@@ -138,6 +138,9 @@
 
         <activity android:name=".activity.rxjava.RxJavaZipActivity">
         </activity>
+
+        <activity android:name=".activity.rxjava.RxJavaConcatActivity">
+        </activity>
     </application>
 
 </manifest>

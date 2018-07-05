@@ -46,4 +46,8 @@ public class RxJavaExampleActivity extends BaseActivity {
     public void openZipActivity(View view) {
         startActivity(new Intent(RxJavaExampleActivity.this, RxJavaZipActivity.class));
     }
+
+    public void openConcatActivity(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, RxJavaConcatActivity.class));
+    }
 }
