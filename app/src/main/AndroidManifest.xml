@@ -141,6 +141,12 @@
 
         <activity android:name=".activity.rxjava.RxJavaConcatActivity">
         </activity>
+
+        <activity android:name=".activity.rxjava.RxJavaDistinctActivity">
+        </activity>
+
+        <activity android:name=".activity.rxjava.RxJavaDistinctActivity">
+        </activity>
     </application>
 
 </manifest>

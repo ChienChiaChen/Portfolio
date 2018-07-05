@@ -50,4 +50,8 @@ public class RxJavaExampleActivity extends BaseActivity {
     public void openConcatActivity(View view) {
         startActivity(new Intent(RxJavaExampleActivity.this, RxJavaConcatActivity.class));
     }
+
+    public void openDistinctActivity(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, RxJavaDistinctActivity.class));
+    }
 }
