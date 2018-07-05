@@ -151,6 +151,10 @@ public class MainActivity extends AppCompatActivity {
                     openCollapsingToolbar(view);
                     break;
                 }
+                case 30:{
+                    openRxPagination(view);
+                    break;
+                }
             }
         }
 
@@ -205,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
             put(27, getString(R.string.fab_and_snackbar));
             put(28, getString(R.string.fab_follows_widget));
             put(29, getString(R.string.collapsing_example));
+            put(30, getString(R.string.rx_pagination));
 
         }};
     }
@@ -329,5 +334,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void openCollapsingToolbar(View view) {
         startActivity(new Intent(MainActivity.this, CollapsingToolbarActivity.class));
+    }
+
+    private void openRxPagination(View view) {
+        startActivity(new Intent(MainActivity.this, RxPaginationActivity.class));
     }
 }

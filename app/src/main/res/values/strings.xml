@@ -124,4 +124,7 @@
     <string name="collapsing_example">29. Collapsing layout</string>
     <string name="toolbar">Toolbar</string>
     <!---->
+
+    <string name="rx_pagination">Rx pagination</string>
+    <string name="zip">7. zip</string>
 </resources>

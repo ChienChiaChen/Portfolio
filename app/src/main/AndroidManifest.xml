@@ -133,6 +133,11 @@
             android:name=".activity.CollapsingToolbarActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".activity.RxPaginationActivity">
+        </activity>
+
+        <activity android:name=".activity.rxjava.RxJavaZipActivity">
+        </activity>
     </application>
 
 </manifest>
