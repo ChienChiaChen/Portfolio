@@ -147,6 +147,9 @@
 
         <activity android:name=".activity.rxjava.RxJavaDistinctActivity">
         </activity>
+
+        <activity android:name=".activity.rxjava.RxJavaFilterActivity">
+        </activity>
     </application>
 
 </manifest>

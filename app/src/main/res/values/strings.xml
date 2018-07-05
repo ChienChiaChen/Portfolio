@@ -129,4 +129,5 @@
     <string name="zip">7. zip</string>
     <string name="concat">8. concat</string>
     <string name="distinct">9. Distinct</string>
+    <string name="filter">10. Filter</string>
 </resources>
