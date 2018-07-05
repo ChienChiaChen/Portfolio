@@ -7,4 +7,9 @@
     android:layout_height="match_parent"
     tools:context="com.chiachen.portfolio.activity.rxjava.RxJavaCreateActivity">
 
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </android.support.constraint.ConstraintLayout>
