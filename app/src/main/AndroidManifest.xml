@@ -162,6 +162,9 @@
 
         <activity android:name=".activity.rxjava.RxJavaDoOnNextActivity">
         </activity>
+
+        <activity android:name=".activity.rxjava.RxJavaSkipActivity">
+        </activity>
     </application>
 
 </manifest>

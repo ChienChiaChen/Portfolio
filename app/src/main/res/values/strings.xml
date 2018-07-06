@@ -134,4 +134,5 @@
     <string name="timer">12. timer</string>
     <string name="interval">13. Interval</string>
     <string name="do_on_next">14. Do on next</string>
+    <string name="skip">15. skip</string>
 </resources>

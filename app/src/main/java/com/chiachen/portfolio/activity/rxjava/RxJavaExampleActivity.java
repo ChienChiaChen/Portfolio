@@ -74,6 +74,9 @@ public class RxJavaExampleActivity extends BaseActivity {
     public void openDoOnNextActivity(View view) {
         startActivity(new Intent(RxJavaExampleActivity.this, RxJavaDoOnNextActivity.class));
     }
-    // RxJavaTimerActivity
-    //
+
+    public void openSkipActivity(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, RxJavaSkipActivity.class));
+    }
+
 }
