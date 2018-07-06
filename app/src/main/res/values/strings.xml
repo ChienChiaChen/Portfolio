@@ -132,4 +132,5 @@
     <string name="filter">10. Filter</string>
     <string name="buffer">11. Buffer</string>
     <string name="timer">12. timer</string>
+    <string name="interval">13. Interval</string>
 </resources>

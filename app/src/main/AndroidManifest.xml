@@ -156,6 +156,9 @@
 
         <activity android:name=".activity.rxjava.RxJavaTimerActivity">
         </activity>
+
+        <activity android:name=".activity.rxjava.RxJavaIntervalActivity">
+        </activity>
     </application>
 
 </manifest>

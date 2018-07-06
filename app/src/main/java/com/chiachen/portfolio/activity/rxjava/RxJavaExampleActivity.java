@@ -66,6 +66,10 @@ public class RxJavaExampleActivity extends BaseActivity {
     public void openTimerActivity(View view) {
         startActivity(new Intent(RxJavaExampleActivity.this, RxJavaTimerActivity.class));
     }
+
+    public void openIntervalActivity(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, RxJavaIntervalActivity.class));
+    }
     // RxJavaTimerActivity
     //
 }
