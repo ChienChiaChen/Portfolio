@@ -138,4 +138,6 @@
     <string name="take">16. take</string>
     <string name="single">17. Single</string>
     <string name="debounce">18. debounce</string>
+    <string name="reduce">19. Reduce</string>
+    <string name="scan">20. Scan</string>
 </resources>

@@ -167,6 +167,23 @@
             android:textAllCaps="false"
             android:textColor="@android:color/black"/>
 
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openReduceActivity"
+            android:text="@string/reduce"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openScanActivity"
+            android:text="@string/scan"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"/>
+
     </LinearLayout>
 
 </ScrollView>

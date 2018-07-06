@@ -91,4 +91,12 @@ public class RxJavaExampleActivity extends BaseActivity {
         startActivity(new Intent(RxJavaExampleActivity.this, RxJavaDebounceActivity.class));
     }
 
+    public void openReduceActivity(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, RxJavaReduceActivity.class));
+    }
+
+    public void openScanActivity(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, RxJavaScanActivity.class));
+    }
+
 }
