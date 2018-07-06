@@ -155,6 +155,10 @@ public class MainActivity extends AppCompatActivity {
                     openRxPagination(view);
                     break;
                 }
+                case 31:{
+                    openCustomView(view);
+                    break;
+                }
             }
         }
 
@@ -163,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -210,6 +215,7 @@ public class MainActivity extends AppCompatActivity {
             put(28, getString(R.string.fab_follows_widget));
             put(29, getString(R.string.collapsing_example));
             put(30, getString(R.string.rx_pagination));
+            put(31, getString(R.string.custom_view));
 
         }};
     }
@@ -338,5 +344,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void openRxPagination(View view) {
         startActivity(new Intent(MainActivity.this, RxPaginationActivity.class));
+    }
+
+    private void openCustomView(View view) {
+        startActivity(new Intent(MainActivity.this, CustomViewActivity.class));
     }
 }

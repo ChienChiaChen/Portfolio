@@ -126,6 +126,7 @@
     <!---->
 
     <string name="rx_pagination">Rx pagination</string>
+    <string name="custom_view">Custom View</string>
     <string name="zip">7. zip</string>
     <string name="concat">8. concat</string>
     <string name="distinct">9. Distinct</string>

@@ -135,50 +135,38 @@
         </activity>
         <activity android:name=".activity.RxPaginationActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaZipActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaConcatActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaDistinctActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaDistinctActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaFilterActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaBufferActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaTimerActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaIntervalActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaDoOnNextActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaSkipActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaTakeActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaSingleActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaDebounceActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaReduceActivity">
         </activity>
-
         <activity android:name=".activity.rxjava.RxJavaScanActivity">
+        </activity>
+        <activity android:name=".activity.CustomViewActivity"
+                  android:theme="@style/_AppTheme">
         </activity>
     </application>
 
