@@ -165,6 +165,15 @@
 
         <activity android:name=".activity.rxjava.RxJavaSkipActivity">
         </activity>
+
+        <activity android:name=".activity.rxjava.RxJavaTakeActivity">
+        </activity>
+
+        <activity android:name=".activity.rxjava.RxJavaSingleActivity">
+        </activity>
+
+        <activity android:name=".activity.rxjava.RxJavaDebounceActivity">
+        </activity>
     </application>
 
 </manifest>

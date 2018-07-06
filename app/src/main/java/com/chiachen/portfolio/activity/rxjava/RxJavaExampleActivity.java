@@ -79,4 +79,16 @@ public class RxJavaExampleActivity extends BaseActivity {
         startActivity(new Intent(RxJavaExampleActivity.this, RxJavaSkipActivity.class));
     }
 
+    public void openTakeActivity(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, RxJavaTakeActivity.class));
+    }
+
+    public void openSingleActivity(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, RxJavaSingleActivity.class));
+    }
+
+    public void openDebounceActivity(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, RxJavaDebounceActivity.class));
+    }
+
 }

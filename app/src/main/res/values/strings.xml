@@ -135,4 +135,7 @@
     <string name="interval">13. Interval</string>
     <string name="do_on_next">14. Do on next</string>
     <string name="skip">15. skip</string>
+    <string name="take">16. take</string>
+    <string name="single">17. Single</string>
+    <string name="debounce">18. debounce</string>
 </resources>

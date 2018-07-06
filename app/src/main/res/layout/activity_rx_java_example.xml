@@ -143,6 +143,30 @@
             android:textAllCaps="false"
             android:textColor="@android:color/black"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openTakeActivity"
+            android:text="@string/take"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openSingleActivity"
+            android:text="@string/single"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openDebounceActivity"
+            android:text="@string/debounce"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"/>
+
     </LinearLayout>
 
 </ScrollView>
