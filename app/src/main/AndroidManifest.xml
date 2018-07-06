@@ -159,6 +159,9 @@
 
         <activity android:name=".activity.rxjava.RxJavaIntervalActivity">
         </activity>
+
+        <activity android:name=".activity.rxjava.RxJavaDoOnNextActivity">
+        </activity>
     </application>
 
 </manifest>

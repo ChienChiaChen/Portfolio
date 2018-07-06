@@ -127,6 +127,14 @@
             android:textAllCaps="false"
             android:textColor="@android:color/black"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openDoOnNextActivity"
+            android:text="@string/do_on_next"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"/>
+
     </LinearLayout>
 
 </ScrollView>
