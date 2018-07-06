@@ -131,4 +131,5 @@
     <string name="distinct">9. Distinct</string>
     <string name="filter">10. Filter</string>
     <string name="buffer">11. Buffer</string>
+    <string name="timer">12. timer</string>
 </resources>
