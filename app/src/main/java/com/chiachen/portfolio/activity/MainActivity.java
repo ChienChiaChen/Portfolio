@@ -9,6 +9,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
 import com.chiachen.portfolio.R;
+import com.chiachen.portfolio.activity.customv.CustomViewExampleActivity;
 import com.chiachen.portfolio.activity.di.Dagger2ExampleActivity;
 import com.chiachen.portfolio.activity.eventbus.EventBusMainActivity;
 import com.chiachen.portfolio.activity.page.RoutingPageAActivity;
@@ -159,6 +160,10 @@ public class MainActivity extends AppCompatActivity {
                     openCustomView(view);
                     break;
                 }
+                case 32:{
+                    openCustomViewExample(view);
+                    break;
+                }
             }
         }
 
@@ -216,6 +221,7 @@ public class MainActivity extends AppCompatActivity {
             put(29, getString(R.string.collapsing_example));
             put(30, getString(R.string.rx_pagination));
             put(31, getString(R.string.custom_view));
+            put(32, getString(R.string.custom_view_example));
 
         }};
     }
@@ -348,5 +354,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void openCustomView(View view) {
         startActivity(new Intent(MainActivity.this, CustomViewActivity.class));
+    }
+
+    private void openCustomViewExample(View view) {
+        startActivity(new Intent(MainActivity.this, CustomViewExampleActivity.class));
     }
 }

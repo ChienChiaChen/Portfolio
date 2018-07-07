@@ -121,12 +121,14 @@
     <!---->
 
     <!---->
-    <string name="collapsing_example">29. Collapsing layout</string>
+    <string name="collapsing_example">30. Collapsing layout</string>
+    <string name="rx_pagination">31. Rx pagination</string>
+    <string name="custom_view">32. Custom View</string>
+    <string name="custom_view_example">32. Custom View Example</string>
+
     <string name="toolbar">Toolbar</string>
     <!---->
 
-    <string name="rx_pagination">Rx pagination</string>
-    <string name="custom_view">Custom View</string>
     <string name="zip">7. zip</string>
     <string name="concat">8. concat</string>
     <string name="distinct">9. Distinct</string>

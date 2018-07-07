@@ -165,8 +165,11 @@
         </activity>
         <activity android:name=".activity.rxjava.RxJavaScanActivity">
         </activity>
-        <activity android:name=".activity.CustomViewActivity"
-                  android:theme="@style/_AppTheme">
+        <activity
+            android:name=".activity.CustomViewActivity"
+            android:theme="@style/_AppTheme">
+        </activity>
+        <activity android:name=".activity.customv.CustomViewExampleActivity">
         </activity>
     </application>
 
