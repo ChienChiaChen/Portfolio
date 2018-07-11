@@ -12,27 +12,38 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.chiachen.portfolio.utils.ui.RoundImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_margin="10dp"
-            android:src="@mipmap/ic_launcher">
-        </com.chiachen.portfolio.utils.ui.RoundImageView>
+        <com.chiachen.portfolio.utils.ui.RoundImageViewByXfermode
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/got_s" >
+        </com.chiachen.portfolio.utils.ui.RoundImageViewByXfermode>
 
-        <com.jsibbold.zoomage.ZoomageView
-            android:id="@+id/myZoomageView"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/__leak_canary_icon"
-            app:zoomage_restrictBounds="false"
-            app:zoomage_animateOnReset="true"
-            app:zoomage_autoResetMode="UNDER"
-            app:zoomage_autoCenter="true"
-            app:zoomage_zoomable="true"
-            app:zoomage_translatable="true"
-            app:zoomage_minScale="0.6"
-            app:zoomage_maxScale="8"
-            />
+        <com.chiachen.portfolio.utils.ui.RoundImageViewByXfermode
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/got_s"
+            android:layout_marginTop="10dp"
+            app:borderRadius="30dp"
+            app:type="round" >
+        </com.chiachen.portfolio.utils.ui.RoundImageViewByXfermode>
+
+        <com.chiachen.portfolio.utils.ui.RoundImageViewByXfermode
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/got_s"
+            app:type="circle" >
+        </com.chiachen.portfolio.utils.ui.RoundImageViewByXfermode>
+
+        <com.chiachen.portfolio.utils.ui.RoundImageViewByXfermode
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/got_s"
+            app:type="circle" >
+        </com.chiachen.portfolio.utils.ui.RoundImageViewByXfermode>
+
     </LinearLayout>
+
 
 </ScrollView>

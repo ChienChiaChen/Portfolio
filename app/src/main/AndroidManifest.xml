@@ -35,6 +35,7 @@
             android:theme="@style/_AppTheme">
         </activity>
         <activity android:name=".activity.CustomImageActivity">
+
         </activity>
         <activity android:name=".activity.FlipCardActivity">
         </activity>
