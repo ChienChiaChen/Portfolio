@@ -168,6 +168,9 @@ public class MainActivity extends AppCompatActivity {
                     openIntentService(view);
                     break;
                 }
+                case 34:{
+                    openMergeViewStub(view);
+                }
             }
         }
 
@@ -176,8 +179,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -191,6 +192,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mRecyclerViewHomeAdapter);
         mRecyclerViewHomeAdapter.setOnItemClickListener(mOnItemClickListener);
     }
+
 
     private void prepareItemName() {
         sMap = new LinkedHashMap<Integer, String>() {{
@@ -228,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
             put(31, getString(R.string.custom_view));
             put(32, getString(R.string.custom_view_example));
             put(33, getString(R.string.intent_service_1));
-
+            put(34, getString(R.string.merge_view_stub));
         }};
     }
 
@@ -368,6 +370,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void openIntentService(View view) {
         startActivity(new Intent(MainActivity.this, IntentServiceActivity.class));
+    }
+
+    private void openMergeViewStub(View view) {
+        startActivity(new Intent(MainActivity.this, MergeViewStubActivity.class));
     }
 
 }

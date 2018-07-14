@@ -174,13 +174,17 @@
         <activity android:name=".activity.LifecycleActivity">
         </activity>
 
-        <!---->
+        <!--  -->
         <activity android:name=".activity.IntentServiceActivity">
         </activity>
-        <service android:name=".service.MyIntentService"
-                 android:exported="false">
+
+        <service
+            android:name=".service.MyIntentService"
+            android:exported="false">
         </service>
-        <!---->
+        <!--  -->
+        <activity android:name=".activity.MergeViewStubActivity">
+        </activity>
     </application>
 
 </manifest>

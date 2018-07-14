@@ -142,5 +142,6 @@
     <string name="custom_view">32. Custom View</string>
     <string name="custom_view_example">32. Custom View Example</string>
     <string name="intent_service_1">33. IntentService</string>
+    <string name="merge_view_stub">34. Merge ViewStub</string>
     <!---->
 </resources>
