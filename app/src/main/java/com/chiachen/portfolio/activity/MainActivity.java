@@ -164,6 +164,10 @@ public class MainActivity extends AppCompatActivity {
                     openCustomViewExample(view);
                     break;
                 }
+                case 33:{
+                    openIntentService(view);
+                    break;
+                }
             }
         }
 
@@ -172,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
+
 
 
     @Override
@@ -222,6 +227,7 @@ public class MainActivity extends AppCompatActivity {
             put(30, getString(R.string.rx_pagination));
             put(31, getString(R.string.custom_view));
             put(32, getString(R.string.custom_view_example));
+            put(33, getString(R.string.intent_service_1));
 
         }};
     }
@@ -359,4 +365,9 @@ public class MainActivity extends AppCompatActivity {
     private void openCustomViewExample(View view) {
         startActivity(new Intent(MainActivity.this, CustomViewExampleActivity.class));
     }
+
+    private void openIntentService(View view) {
+        startActivity(new Intent(MainActivity.this, IntentServiceActivity.class));
+    }
+
 }

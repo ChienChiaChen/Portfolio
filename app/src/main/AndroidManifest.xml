@@ -35,7 +35,6 @@
             android:theme="@style/_AppTheme">
         </activity>
         <activity android:name=".activity.CustomImageActivity">
-
         </activity>
         <activity android:name=".activity.FlipCardActivity">
         </activity>
@@ -174,6 +173,14 @@
         </activity>
         <activity android:name=".activity.LifecycleActivity">
         </activity>
+
+        <!---->
+        <activity android:name=".activity.IntentServiceActivity">
+        </activity>
+        <service android:name=".service.MyIntentService"
+                 android:exported="false">
+        </service>
+        <!---->
     </application>
 
 </manifest>

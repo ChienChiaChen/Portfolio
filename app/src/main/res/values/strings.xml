@@ -120,15 +120,9 @@
     <string name="long_latin">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</string>
     <!---->
 
-    <!---->
-    <string name="collapsing_example">30. Collapsing layout</string>
-    <string name="rx_pagination">31. Rx pagination</string>
-    <string name="custom_view">32. Custom View</string>
-    <string name="custom_view_example">32. Custom View Example</string>
-
     <string name="toolbar">Toolbar</string>
-    <!---->
 
+    <!---->
     <string name="zip">7. zip</string>
     <string name="concat">8. concat</string>
     <string name="distinct">9. Distinct</string>
@@ -143,4 +137,10 @@
     <string name="debounce">18. debounce</string>
     <string name="reduce">19. Reduce</string>
     <string name="scan">20. Scan</string>
+    <string name="collapsing_example">30. Collapsing layout</string>
+    <string name="rx_pagination">31. Rx pagination</string>
+    <string name="custom_view">32. Custom View</string>
+    <string name="custom_view_example">32. Custom View Example</string>
+    <string name="intent_service_1">33. IntentService</string>
+    <!---->
 </resources>
