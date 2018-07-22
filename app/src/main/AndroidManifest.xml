@@ -187,6 +187,12 @@
         </activity>
         <activity android:name=".activity.BasicServiceActivity">
         </activity>
+
+        <service
+            android:name=".service.BasicService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
     </application>
 
 </manifest>
