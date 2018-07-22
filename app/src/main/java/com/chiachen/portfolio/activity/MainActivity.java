@@ -171,6 +171,9 @@ public class MainActivity extends AppCompatActivity {
                 case 34:{
                     openMergeViewStub(view);
                 }
+                case 35:{
+                    openBasicServiceActivity();
+                }
             }
         }
 
@@ -231,6 +234,7 @@ public class MainActivity extends AppCompatActivity {
             put(32, getString(R.string.custom_view_example));
             put(33, getString(R.string.intent_service_1));
             put(34, getString(R.string.merge_view_stub));
+            put(35, getString(R.string.basic_service));
         }};
     }
 
@@ -374,6 +378,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void openMergeViewStub(View view) {
         startActivity(new Intent(MainActivity.this, MergeViewStubActivity.class));
+    }
+
+    private void openBasicServiceActivity(){
+        startActivity(new Intent(MainActivity.this, BasicServiceActivity.class));
     }
 
 }

@@ -185,6 +185,8 @@
         <!--  -->
         <activity android:name=".activity.MergeViewStubActivity">
         </activity>
+        <activity android:name=".activity.BasicServiceActivity">
+        </activity>
     </application>
 
 </manifest>
