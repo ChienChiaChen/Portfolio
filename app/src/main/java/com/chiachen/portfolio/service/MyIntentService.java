@@ -20,6 +20,7 @@ public class MyIntentService extends IntentService {
 
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
+        assert intent != null;
         int taskFlag = intent.getIntExtra(Constant.FLAG_TASK, 1);
         ResultReceiver receiver = intent.getParcelableExtra(Constant.FLAG_RECEIVER);
         int rand = (int) (Math.random() * 3 + 1);

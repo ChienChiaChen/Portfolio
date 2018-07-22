@@ -37,7 +37,7 @@ public class IntentServiceActivity extends AppCompatActivity {
                 if (resultCode == Constant.RESULT_CODE) {
                     String returnStr = resultData.getString(Constant.RETURN_TASK);
                     if (returnStr != null) {
-                        stringBuffer.append(returnStr + "\n");
+                        stringBuffer.append(returnStr).append("\n");
                         result.setText(stringBuffer);
                     }
                 }
