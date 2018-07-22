@@ -29,4 +29,26 @@
         android:textColor="@android:color/black"
         tools:ignore="OnClick"
         />
+
+    <Button
+        android:id="@+id/bind_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="bindService_"
+        android:text="@string/bind_service"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        tools:ignore="OnClick"
+        />
+
+    <Button
+        android:id="@+id/unbind_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="UnbindService"
+        android:text="@string/unbind_service"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        tools:ignore="OnClick"
+        />
 </LinearLayout>
