@@ -6,23 +6,36 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.Process;
+import android.os.RemoteException;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
 import com.chiachen.portfolio.R;
+import com.chiachen.portfolio.aidl.IMyAidlInterface;
 import com.chiachen.portfolio.service.BasicService;
 
 public class BasicServiceActivity extends AppCompatActivity {
 
     private BasicService.MyBinder myBinder;
 
+    private IMyAidlInterface mIMyAidlInterface;
+
     private ServiceConnection mServiceConnection =new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             Log.d("JASON_CHIEN", "\nonServiceConnected");
-            myBinder = (BasicService.MyBinder) service;
-            myBinder.startDownload();
+            mIMyAidlInterface = IMyAidlInterface.Stub.asInterface(service);
+            try {
+                int result = mIMyAidlInterface.plus(3, 5);
+                String upperStr = mIMyAidlInterface.toUpperCase("hello world");
+                Log.d("JASON_CHIEN", "result is " + result);
+                Log.d("JASON_CHIEN", "upperStr is " + upperStr);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+
         }
 
         @Override
@@ -35,6 +48,7 @@ public class BasicServiceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basic_service);
+        Log.d("JASON_CHIEN", "\nBasicServiceActivity: myId"+ Process.myPid());
     }
 
     public void startService(View view) {

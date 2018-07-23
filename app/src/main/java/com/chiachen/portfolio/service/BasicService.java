@@ -8,14 +8,17 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Binder;
 import android.os.IBinder;
+import android.os.Process;
+import android.os.RemoteException;
 import android.util.Log;
 
 import com.chiachen.portfolio.R;
 import com.chiachen.portfolio.activity.BasicServiceActivity;
+import com.chiachen.portfolio.aidl.IMyAidlInterface;
 
 public class BasicService extends Service {
 
-    private MyBinder mBinder = new MyBinder();
+    private MyBinder mBinderr = new MyBinder();
 
     public BasicService() {
     }
@@ -23,7 +26,14 @@ public class BasicService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+        Log.d("JASON_CHIEN", "\nBasicService: myId"+ Process.myPid());
         Log.d("JASON_CHIEN", "\nonCreate");
+        // try {
+        //     Thread.sleep(60000);
+        // } catch (InterruptedException e) {
+        //     e.printStackTrace();
+        // }
+
     }
 
     @Override
@@ -66,4 +76,21 @@ public class BasicService extends Service {
             Log.d("JASON_CHIEN", "\nstartDownload() executed");
         }
     }
+
+    IMyAidlInterface.Stub mBinder = new IMyAidlInterface.Stub() {
+
+        @Override
+        public String toUpperCase(String str) throws RemoteException {
+            if (str != null) {
+                return str.toUpperCase();
+            }
+            return null;
+        }
+
+        @Override
+        public int plus(int a, int b) throws RemoteException {
+            return a + b;
+        }
+    };
+
 }
