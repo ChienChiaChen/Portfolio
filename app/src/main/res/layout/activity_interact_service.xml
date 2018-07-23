@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.chiachen.portfolio.activity.InteractServiceActivity"
+    >
+
+    <Button
+        android:id="@+id/bind_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bind_service"
+        android:textColor="@android:color/black"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/invoke_service_methods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/invoke_service_methods"
+        android:textColor="@android:color/black"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/unbind_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/unbind_service"
+        android:textColor="@android:color/black"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/interact_with_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/interact_with_service"
+        android:textColor="@android:color/black"
+        android:textAllCaps="false"
+        />
+
+</LinearLayout>
