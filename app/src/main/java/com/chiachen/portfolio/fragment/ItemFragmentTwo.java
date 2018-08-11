@@ -26,6 +26,12 @@ public class ItemFragmentTwo extends Fragment {
         Log.e("JASON_CHIEN", "\nonCreate");
         super.onCreate(savedInstanceState);
     }
+    
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        Log.i("Jason", ItemFragmentTwo.class.getSimpleName() + " : onHiddenChanged");
+    }
 
     @Nullable
     @Override
