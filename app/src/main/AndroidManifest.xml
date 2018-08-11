@@ -206,6 +206,10 @@
             android:enabled="true"
             android:exported="true">
         </service>
+
+        <activity android:name=".activity.FragmentHomeActivity"
+                  android:theme="@style/_AppTheme">
+        </activity>
     </application>
 
 </manifest>

@@ -339,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openFragmentWithAnim(View view) {
-        startActivity(new Intent(MainActivity.this, FragmentWithAnimActivity.class));
+        startActivity(new Intent(MainActivity.this, FragmentHomeActivity.class));
     }
 
     private void openActivityTransition(View view) {

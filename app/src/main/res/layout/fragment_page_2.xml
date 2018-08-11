@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#2a2a2a"
-    android:orientation="vertical">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:background="#2a2a2a"
+                android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,6 +26,17 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:layout_above="@+id/text"
+        tools:text="Activity Title"
+        />
+
+    <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,6 +45,5 @@
         android:textSize="20dp"
         android:textColor="@android:color/white"
         />
-
 
 </RelativeLayout>

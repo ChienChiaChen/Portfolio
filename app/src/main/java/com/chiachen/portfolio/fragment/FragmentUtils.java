@@ -22,7 +22,7 @@ public class FragmentUtils {
         fragmentManager
                 .beginTransaction()
                 .addToBackStack(tag)
-                .setCustomAnimations(R.anim.slide_left, R.anim.slide_right, R.anim.slide_left, R.anim.slide_right)
+                // .setCustomAnimations(R.anim.slide_left, R.anim.slide_right, R.anim.slide_left, R.anim.slide_right)
                 .add(containerViewId, fragment, tag)
                 .commit();
     }

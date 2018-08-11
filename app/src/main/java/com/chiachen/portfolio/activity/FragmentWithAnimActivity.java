@@ -15,19 +15,14 @@ public class FragmentWithAnimActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_with_anim);
-        nextPage(FragmentPage1.newInstance(), FragmentPage1.TAG);
-    }
-
-    public void nextPage(Fragment fragment, String tag) {
-        FragmentUtils.nextFragment(getSupportFragmentManager(), fragment, tag, R.id.root_view);
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (0 != getSupportFragmentManager().getBackStackEntryCount()) {
-            getSupportFragmentManager().popBackStackImmediate();
-        } else {
-            super.onBackPressed();
-        }
+        Fragment fragment = FragmentPage1.newInstance();
+        Bundle args = new Bundle();
+        args.putString(FragmentWithAnimActivity.TAG, FragmentWithAnimActivity.class.getSimpleName());
+        fragment.setArguments(args);
+    
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.root_view, fragment, FragmentPage1.TAG)
+                .commit();
     }
 }
