@@ -211,7 +211,10 @@
             android:name=".activity.FragmentHomeActivity"
             android:theme="@style/_AppTheme">
         </activity>
-        <activity android:name=".activity.ViewPagerActivity">
+        <activity android:name=".activity.ViewPagerActivity"
+                  android:theme="@style/AppTheme.NoActionBar_"
+                  android:screenOrientation="portrait"
+            >
         </activity>
     </application>
 

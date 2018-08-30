@@ -1,0 +1,9 @@
+<ImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="10dp"
+    android:layout_height="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:contentDescription="@string/app_name"
+    android:scaleType="fitXY"
+    android:src="@drawable/image_selector_page_dot" />

@@ -1,10 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/img_iap_bg"
     tools:context="com.chiachen.portfolio.activity.ViewPagerActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/promoteViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+
+        <LinearLayout style="@style/IapPromotePanel"
+                      xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <View
+                style="@style/IapPromoteUpperPanel"/>
+
+            <RelativeLayout
+                style="@style/IapPromoteMidPanel">
+
+                <ImageView
+                    android:id="@+id/leftArrowBtn"
+                    android:layout_width="33dp"
+                    android:layout_height="66dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:padding="7dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/image_selector_tutorial_left_arrow_btn"/>
+
+                <ImageView
+                    android:id="@+id/rightArrowBtn"
+                    android:layout_width="33dp"
+                    android:layout_height="66dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="7dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/image_selector_tutorial_right_arrow_btn"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.2"
+            android:background="@drawable/font_background"/>
+
+        <LinearLayout
+            android:id="@+id/promoteIndicatorView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"/>
+
+        <RelativeLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <FrameLayout
+                android:id="@+id/btn_back"
+                style="@style/GeneralTopBtnStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp">
+
+                <com.chiachen.portfolio.utils.ui.TintableImageView
+                    style="@style/TopBannerIconStyle"
+                    android:background="@drawable/image_selector_camera_top_banner_black"
+                    android:src="@drawable/camera_btn_back"
+                    android:tint="@android:color/white" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textColor="@color/setting_item_text"
+                android:text="@string/iap_promote_title_header"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="53dp"
+                android:layout_marginEnd="53dp"
+                android:layout_gravity="center_horizontal"/>
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/IapPromoteTitleHintText"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/top_bar"
+            android:textColor="@color/setting_item_text"
+            android:text="@string/iap_promote_title_hint"/>
+
+</RelativeLayout>

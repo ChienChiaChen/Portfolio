@@ -153,4 +153,14 @@
     <string name="interact_with_service">Interact with service</string>
     <string name="invoke_service_methods">Invoke service methods</string>
     <!---->
+
+    <string name="iap_promote_title_a">Make Your Home Screen Ad-Free</string>
+    <string name="iap_promote_title_b">Save Photos without Ads</string>
+    <string name="iap_promote_title_c">No More Ads after Lucky Draw</string>
+    <string name="iap_promote_title_d">Close the App without Pop-ups!</string>
+    <string name="iap_promote_title_e">You can save photos in highest resolutions</string>
+    <string name="iap_promote_title_f">Unlimited object removal</string>
+    <string name="iap_promote_title_hint">Buy once to have following features:</string>
+    <string name="iap_promote_title_header">Upgrade to PRO</string>
+    <string name="iap_promote_sub_title">*YouCam Apps and events not included</string>
 </resources>

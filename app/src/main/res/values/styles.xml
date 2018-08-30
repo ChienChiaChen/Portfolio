@@ -73,4 +73,69 @@
         <item name="android:paddingBottom">24dp</item>
         <item name="android:orientation">vertical</item>
     </style>
+
+    <style name="TopBannerIconStyle">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/image_selector_camera_top_banner</item>
+    </style>
+
+    <style name="IapPromotePanel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="IapPromoteUpperPanel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">480</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginTop">60dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:gravity">center|top</item>
+    </style>
+
+    <style name="IapPromoteMidPanel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">880</item>
+    </style>
+
+    <style name="GeneralTopBtnStyle">
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_width">45dp</item>
+    </style>
+
+    <style name="DefaultFontStyle"/>
+
+    <style name="IapPromoteTitleHintText" parent="DefaultFontStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="IapPromoteSubTitleText" parent="DefaultFontStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">11dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">#959595</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="IapPromoteTitleText" parent="DefaultFontStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">#F23B77</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>

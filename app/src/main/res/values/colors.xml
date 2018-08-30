@@ -38,4 +38,6 @@
     <color name="mainWeightDashboardViewPrimaryDark">#6E6E6E</color>
     <color name="mainWeightDashboardViewSecPrimaryDark">#9D9D9D</color>
     <!---->
+
+    <color name="setting_item_text">#424242</color>
 </resources>

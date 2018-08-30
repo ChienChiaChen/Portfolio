@@ -18,4 +18,8 @@
         <enum name="round" value="1" />
     </attr>
 
+    <declare-styleable name="TintableImageView">
+        <attr name="pfw_tint" format="reference|color"/>
+    </declare-styleable>
+
 </resources>
