@@ -207,8 +207,11 @@
             android:exported="true">
         </service>
 
-        <activity android:name=".activity.FragmentHomeActivity"
-                  android:theme="@style/_AppTheme">
+        <activity
+            android:name=".activity.FragmentHomeActivity"
+            android:theme="@style/_AppTheme">
+        </activity>
+        <activity android:name=".activity.ViewPagerActivity">
         </activity>
     </application>
 

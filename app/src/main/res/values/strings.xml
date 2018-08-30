@@ -144,6 +144,8 @@
     <string name="intent_service_1">33. IntentService</string>
     <string name="merge_view_stub">34. Merge ViewStub</string>
     <string name="basic_service">35. Basic Activity</string>
+    <string name="open_view_pager">36. View pager</string>
+
     <string name="start_service">Start Service</string>
     <string name="stop_service">Stop Service</string>
     <string name="bind_service">Bind Service</string>

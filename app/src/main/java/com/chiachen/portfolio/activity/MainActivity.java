@@ -174,6 +174,9 @@ public class MainActivity extends AppCompatActivity {
                 case 35:{
                     openBasicServiceActivity();
                 }
+                case 36:{
+                    openViewPagerActivity();
+                }
             }
         }
 
@@ -235,6 +238,7 @@ public class MainActivity extends AppCompatActivity {
             put(33, getString(R.string.intent_service_1));
             put(34, getString(R.string.merge_view_stub));
             put(35, getString(R.string.basic_service));
+            put(36, getString(R.string.open_view_pager));
         }};
     }
 
@@ -380,8 +384,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this, MergeViewStubActivity.class));
     }
 
-    private void openBasicServiceActivity(){
+    private void openBasicServiceActivity() {
         startActivity(new Intent(MainActivity.this, BasicServiceActivity.class));
     }
-
+    
+    private void openViewPagerActivity() {
+        startActivity(new Intent(MainActivity.this, ViewPagerActivity.class));
+    }
 }
