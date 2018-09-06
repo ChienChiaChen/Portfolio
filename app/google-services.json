@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "152373741246",
+    "firebase_url": "https://androidcrashlyticsinportfolio.firebaseio.com",
+    "project_id": "androidcrashlyticsinportfolio",
+    "storage_bucket": "androidcrashlyticsinportfolio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152373741246:android:9d26a36d601333c4",
+        "android_client_info": {
+          "package_name": "com.chiachen.portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "152373741246-nqg8ctmp1hbvuqm425nk5sa0f9294v34.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsz55HdjZKq8Vd8sUMxOoXtz0ZwINrSRg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

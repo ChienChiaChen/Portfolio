@@ -23,7 +23,7 @@ android {
         }
 
         debug {
-            applicationIdSuffix ".debug"
+            // applicationIdSuffix ".debug"
             resValue "string", "app_name", "Portfolio_Debug"
         }
     }
@@ -80,4 +80,7 @@ dependencies {
 
     debugCompile "com.readystatesoftware.chuck:library:${libs.chuck}"
     releaseCompile "com.readystatesoftware.chuck:library-no-op:${libs.chuck}"
+
+    implementation 'com.google.firebase:firebase-core:16.0.1'
 }
+apply plugin: 'com.google.gms.google-services'
