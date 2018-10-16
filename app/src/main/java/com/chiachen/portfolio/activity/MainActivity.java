@@ -170,12 +170,18 @@ public class MainActivity extends AppCompatActivity {
                 }
                 case 34:{
                     openMergeViewStub(view);
+                    break;
                 }
                 case 35:{
                     openBasicServiceActivity();
+                    break;
                 }
                 case 36:{
                     openViewPagerActivity();
+                    break;
+                }
+                case 37:{
+                    openTouchInterceptActivity();
                 }
             }
         }
@@ -239,6 +245,7 @@ public class MainActivity extends AppCompatActivity {
             put(34, getString(R.string.merge_view_stub));
             put(35, getString(R.string.basic_service));
             put(36, getString(R.string.open_view_pager));
+            put(37, getString(R.string.open_touch_intercept));
         }};
     }
 
@@ -391,4 +398,9 @@ public class MainActivity extends AppCompatActivity {
     private void openViewPagerActivity() {
         startActivity(new Intent(MainActivity.this, ViewPagerActivity.class));
     }
+    
+    private void openTouchInterceptActivity() {
+        startActivity(new Intent(MainActivity.this, TouchInterceptActivity.class));
+    }
+    
 }

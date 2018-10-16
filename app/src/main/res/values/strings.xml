@@ -145,6 +145,7 @@
     <string name="merge_view_stub">34. Merge ViewStub</string>
     <string name="basic_service">35. Basic Activity</string>
     <string name="open_view_pager">36. View pager</string>
+    <string name="open_touch_intercept">37. touch intercept</string>
 
     <string name="start_service">Start Service</string>
     <string name="stop_service">Stop Service</string>

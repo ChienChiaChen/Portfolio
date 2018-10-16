@@ -45,7 +45,7 @@ public class WeatherPresenter extends _BasePresenter<WeatherView> {
     }
 
     public void getResultsBasedOnQuery(SearchView searchView) {
-        addSubscription(getSearchObserver(searchView),getObserver());
+        addSubscription(getSearchObserver(searchView), getObserver());
     }
 
     private Observable<WeatherResponse> getSearchObserver(SearchView searchView) {
