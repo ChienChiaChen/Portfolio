@@ -22,4 +22,10 @@
         <attr name="pfw_tint" format="reference|color"/>
     </declare-styleable>
 
+    <declare-styleable name="TrackItem">
+        <attr name="track_item_index" format="string" />
+        <attr name="track_item_title" format="string" />
+        <attr name="track_item_subtitle" format="string" />
+    </declare-styleable>
+
 </resources>
