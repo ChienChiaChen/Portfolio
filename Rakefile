@@ -3,7 +3,6 @@ require 'rubygems'
 task :run_travis_scripts do 
   print_travis_variables
   debug_build
-  end
 end
 
 def debug_build
