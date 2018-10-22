@@ -11,8 +11,8 @@ cache:
     - $HOME/.gradle/wrapper/
 
 env:
-  - ANDROID_API_LEVEL = 26
-  - ANDROID_BUILD_TOOLS =26
+  - ANDROID_API_LEVEL = 25
+  - ANDROID_BUILD_TOOLS =26.0.3
 
 android:
   component:
