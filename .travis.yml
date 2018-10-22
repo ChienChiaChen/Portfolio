@@ -37,6 +37,11 @@ android:
     - chmod +x gradlew
     - ./gradlew dependencies || true
 
+
+before_script:
+    - sudo apt-get install jq
+    - echo building
+
 script: 
     - ./gradlew -version
     - rake run_travis_scripts
