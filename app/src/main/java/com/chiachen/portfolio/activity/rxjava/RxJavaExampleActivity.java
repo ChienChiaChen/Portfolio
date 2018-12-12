@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.chiachen.portfolio.R;
 import com.chiachen.portfolio.activity.BaseActivity;
+import com.chiachen.portfolio.activity.rxjava.backpresure.BackpressureExampleActivity;
 
 public class RxJavaExampleActivity extends BaseActivity {
 
@@ -99,4 +100,7 @@ public class RxJavaExampleActivity extends BaseActivity {
         startActivity(new Intent(RxJavaExampleActivity.this, RxJavaScanActivity.class));
     }
 
+    public void openBackpresureActivity(View view) {
+        startActivity(new Intent(RxJavaExampleActivity.this, BackpressureExampleActivity.class));
+    }
 }
