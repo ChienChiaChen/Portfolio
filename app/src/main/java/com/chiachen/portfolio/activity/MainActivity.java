@@ -9,6 +9,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
 import com.chiachen.portfolio.R;
+import com.chiachen.portfolio.activity.coordinator.CoordinatorPracticeMainActivity;
 import com.chiachen.portfolio.activity.customv.CustomViewExampleActivity;
 import com.chiachen.portfolio.activity.di.Dagger2ExampleActivity;
 import com.chiachen.portfolio.activity.eventbus.EventBusMainActivity;
@@ -408,7 +409,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openCoordinatorLayoutPracticeActivity() {
-        startActivity(new Intent(MainActivity.this, CoordinatorPracticeActivity.class));
+        startActivity(new Intent(MainActivity.this, CoordinatorPracticeMainActivity.class));
     }
     
 }

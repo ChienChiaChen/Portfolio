@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.chiachen.portfolio">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,7 +12,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -145,10 +147,20 @@
             android:name=".activity.ViewPagerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar_" />
-        <activity android:name=".activity.TouchInterceptActivity"></activity>
+        <activity android:name=".activity.TouchInterceptActivity" />
         <activity android:name=".activity.rxjava.backpresure.BackpressureExampleActivity" />
-        <activity android:name=".activity.CoordinatorPracticeActivity"
-            android:theme="@style/AppTheme.NoActionBar_"></activity>
+        <activity
+            android:name=".activity.coordinator.CoordinatorPracticeMainActivity"
+            android:theme="@style/AppTheme.NoActionBar_" />
+        <activity
+            android:name=".activity.coordinator.CoordinatorPractice1Activity"
+            android:theme="@style/AppTheme.NoActionBar_" />
+        <activity
+            android:name=".activity.coordinator.CoordinatorPractice2Activity"
+            android:theme="@style/AppTheme.NoActionBar_" />
+        <activity
+            android:name=".activity.coordinator.CoordinatorPractice3Activity"
+            android:theme="@style/AppTheme.NoActionBar_" />
     </application>
 
 </manifest>

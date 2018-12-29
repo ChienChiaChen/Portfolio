@@ -1,28 +1,19 @@
-package com.chiachen.portfolio.activity;
+package com.chiachen.portfolio.activity.coordinator;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.chiachen.portfolio.R;
 import com.chiachen.portfolio.adapter.ViewPagerAdapter;
-import com.chiachen.portfolio.adapter.custom_adapter.MyAdapter;
 import com.chiachen.portfolio.fragment.ItemFragmentOne;
 import com.chiachen.portfolio.fragment.ItemFragmentThree;
 import com.chiachen.portfolio.fragment.ItemFragmentTwo;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class CoordinatorPracticeActivity extends AppCompatActivity {
-
-//    private RecyclerView recyclerView;
-//    private MyAdapter myAdapter;
-//    private List<String> myList;
+public class CoordinatorPractice3Activity extends AppCompatActivity {
 
     private ViewPager mViewPager;
     private TabLayout mTabLayout;
@@ -30,17 +21,7 @@ public class CoordinatorPracticeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_coordinator_practice);
-
-//        myList = new ArrayList<>();
-//        for (int i = 0; i < 20; i++) {
-//            myList.add("item " + (i + 1));
-//        }
-//        myAdapter = new MyAdapter(myList);
-//        recyclerView = findViewById(R.id.rv_content);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        recyclerView.setAdapter(myAdapter);
-
+        setContentView(R.layout.activity_coordinator_practice3);
         initTab();
     }
 
@@ -75,11 +56,11 @@ public class CoordinatorPracticeActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 if (adapter.getItem(position) instanceof ItemFragmentOne) {
-                    Toast.makeText(CoordinatorPracticeActivity.this, ItemFragmentOne.TAG, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CoordinatorPractice3Activity.this, ItemFragmentOne.TAG, Toast.LENGTH_SHORT).show();
                 } else if (adapter.getItem(position) instanceof ItemFragmentTwo) {
-                    Toast.makeText(CoordinatorPracticeActivity.this, ItemFragmentTwo.TAG, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CoordinatorPractice3Activity.this, ItemFragmentTwo.TAG, Toast.LENGTH_SHORT).show();
                 } else if (adapter.getItem(position) instanceof ItemFragmentThree) {
-                    Toast.makeText(CoordinatorPracticeActivity.this, ItemFragmentThree.TAG, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CoordinatorPractice3Activity.this, ItemFragmentThree.TAG, Toast.LENGTH_SHORT).show();
                 }
             }
 

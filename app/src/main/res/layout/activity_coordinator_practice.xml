@@ -1,46 +1,35 @@
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:onClick="openCoordinator1"
+        android:text="CoordinatorLayout + AppBarLayout + Toolbar"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:background="#cdcdcd"
-            app:layout_scrollFlags="scroll" />
-
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#ffff"
-            app:tabGravity="fill"
-            app:tabIndicatorColor="@color/colorAccent"
-            app:tabIndicatorHeight="2dp"
-            app:tabMode="fixed"
-            app:tabSelectedTextColor="@color/colorAccent"
-            app:tabTextColor="#0000" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/nsv_up"
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:onClick="openCoordinator2"
+        android:text="CoordinatorLayout + AppBarLayout + CollapsingToolbarLayout + Toolbar"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        />
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#ffff"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-    </android.support.v4.widget.NestedScrollView>
 
-</android.support.design.widget.CoordinatorLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openCoordinator3"
+        android:text="CoordinatorLayout + AppBarLayout + TabLayout + ViewPager"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        />
+</LinearLayout>
