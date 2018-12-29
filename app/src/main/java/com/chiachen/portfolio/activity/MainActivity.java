@@ -183,6 +183,9 @@ public class MainActivity extends AppCompatActivity {
                 case 37:{
                     openTouchInterceptActivity();
                 }
+                case 38:{
+                    openCoordinatorLayoutPracticeActivity();
+                }
             }
         }
 
@@ -246,6 +249,7 @@ public class MainActivity extends AppCompatActivity {
             put(35, getString(R.string.basic_service));
             put(36, getString(R.string.open_view_pager));
             put(37, getString(R.string.open_touch_intercept));
+            put(38, getString(R.string.open_coordiante_layout));
         }};
     }
 
@@ -401,6 +405,10 @@ public class MainActivity extends AppCompatActivity {
     
     private void openTouchInterceptActivity() {
         startActivity(new Intent(MainActivity.this, TouchInterceptActivity.class));
+    }
+
+    private void openCoordinatorLayoutPracticeActivity() {
+        startActivity(new Intent(MainActivity.this, CoordinatorPracticeActivity.class));
     }
     
 }
