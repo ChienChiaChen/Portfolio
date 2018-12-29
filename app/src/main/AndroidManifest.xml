@@ -147,7 +147,8 @@
             android:theme="@style/AppTheme.NoActionBar_" />
         <activity android:name=".activity.TouchInterceptActivity"></activity>
         <activity android:name=".activity.rxjava.backpresure.BackpressureExampleActivity" />
-        <activity android:name=".activity.CoordinatorPracticeActivity"></activity>
+        <activity android:name=".activity.CoordinatorPracticeActivity"
+            android:theme="@style/AppTheme.NoActionBar_"></activity>
     </application>
 
 </manifest>
