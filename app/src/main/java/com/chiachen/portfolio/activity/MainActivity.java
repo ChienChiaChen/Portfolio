@@ -9,6 +9,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
 import com.chiachen.portfolio.R;
+import com.chiachen.portfolio.activity.coordinator.CoordinatorPracticeMainActivity;
 import com.chiachen.portfolio.activity.customv.CustomViewExampleActivity;
 import com.chiachen.portfolio.activity.di.Dagger2ExampleActivity;
 import com.chiachen.portfolio.activity.eventbus.EventBusMainActivity;
@@ -183,6 +184,9 @@ public class MainActivity extends AppCompatActivity {
                 case 37:{
                     openTouchInterceptActivity();
                 }
+                case 38:{
+                    openCoordinatorLayoutPracticeActivity();
+                }
             }
         }
 
@@ -246,6 +250,7 @@ public class MainActivity extends AppCompatActivity {
             put(35, getString(R.string.basic_service));
             put(36, getString(R.string.open_view_pager));
             put(37, getString(R.string.open_touch_intercept));
+            put(38, getString(R.string.open_coordiante_layout));
         }};
     }
 
@@ -401,6 +406,10 @@ public class MainActivity extends AppCompatActivity {
     
     private void openTouchInterceptActivity() {
         startActivity(new Intent(MainActivity.this, TouchInterceptActivity.class));
+    }
+
+    private void openCoordinatorLayoutPracticeActivity() {
+        startActivity(new Intent(MainActivity.this, CoordinatorPracticeMainActivity.class));
     }
     
 }

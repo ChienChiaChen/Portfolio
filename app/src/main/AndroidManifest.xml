@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.chiachen.portfolio">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.chiachen.portfolio">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".global.BaseApplication"
@@ -11,182 +12,116 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".activity.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ProgressButtonActivity">
-        </activity>
+        <activity android:name=".activity.ProgressButtonActivity" />
         <activity
             android:name=".activity.EditTextActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
-        </activity>
-        <activity android:name=".activity.BottomTabActivity">
-        </activity>
-        <activity android:name=".activity.MVPPracticeActivity">
-        </activity>
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity android:name=".activity.BottomTabActivity" />
+        <activity android:name=".activity.MVPPracticeActivity" />
         <activity
             android:name=".activity.RxJavaRetrofitActivity"
-            android:theme="@style/_AppTheme">
-        </activity>
-        <activity android:name=".activity.CustomImageActivity">
-        </activity>
-        <activity android:name=".activity.FlipCardActivity">
-        </activity>
-        <activity android:name=".activity.ActivityTransitionA">
-        </activity>
-        <activity android:name=".activity.ActivityTransitionB">
-        </activity>
-        <activity android:name=".activity.ReposListActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaExampleActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaCreateActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaMapActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaFlatMapActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaConcatMapActivity">
-        </activity>
+            android:theme="@style/_AppTheme" />
+        <activity android:name=".activity.CustomImageActivity" />
+        <activity android:name=".activity.FlipCardActivity" />
+        <activity android:name=".activity.ActivityTransitionA" />
+        <activity android:name=".activity.ActivityTransitionB" />
+        <activity android:name=".activity.ReposListActivity" />
+        <activity android:name=".activity.rxjava.RxJavaExampleActivity" />
+        <activity android:name=".activity.rxjava.RxJavaCreateActivity" />
+        <activity android:name=".activity.rxjava.RxJavaMapActivity" />
+        <activity android:name=".activity.rxjava.RxJavaFlatMapActivity" />
+        <activity android:name=".activity.rxjava.RxJavaConcatMapActivity" />
         <activity
             android:name=".activity.TabLayoutActivity"
-            android:theme="@style/AppTheme.NoActionBar_">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar_" />
         <activity
             android:name=".activity.BroadcastActivity"
-            android:theme="@style/AppTheme.NoActionBar_">
-        </activity>
-        <activity android:name=".activity.SqliteActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.ThrottleActivity">
-        </activity>
-        <activity android:name=".activity.ServiceActivity">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar_" />
+        <activity android:name=".activity.SqliteActivity" />
+        <activity android:name=".activity.rxjava.ThrottleActivity" />
+        <activity android:name=".activity.ServiceActivity" />
 
         <service
             android:name=".service.MyService"
-            android:enabled="true">
-        </service>
+            android:enabled="true" />
 
-        <activity android:name=".activity.ParcelableActivity">
-        </activity>
-        <activity android:name=".activity.BottomDialogTestActivity">
-        </activity>
-        <activity android:name=".activity.page.RoutingPageAActivity">
-        </activity>
-        <activity android:name=".activity.page.RoutingPageBActivity">
-        </activity>
-        <activity android:name=".activity.page.RoutingPageCActivity">
-        </activity>
-        <activity android:name=".activity.page.RoutingPageDActivity">
-        </activity>
+        <activity android:name=".activity.ParcelableActivity" />
+        <activity android:name=".activity.BottomDialogTestActivity" />
+        <activity android:name=".activity.page.RoutingPageAActivity" />
+        <activity android:name=".activity.page.RoutingPageBActivity" />
+        <activity android:name=".activity.page.RoutingPageCActivity" />
+        <activity android:name=".activity.page.RoutingPageDActivity" />
         <activity
             android:name=".activity.DrawerExampleActivity"
-            android:theme="@style/AppTheme.NoActionBar__">
-        </activity>
-        <activity android:name=".activity.ContinuousDownloadActivity">
-        </activity>
-        <activity android:name=".activity.eventbus.EventBusMainActivity">
-        </activity>
-        <activity android:name=".activity.eventbus.EventBusSecondActivity">
-        </activity>
-        <activity android:name=".activity.di.Dagger2ExampleActivity">
-        </activity>
-        <activity android:name=".activity.di.SecondActivity">
-        </activity>
-        <activity android:name=".activity.RecyclerViewExampleActivity">
-        </activity>
-        <activity android:name=".activity.ViewTestActivity">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar__" />
+        <activity android:name=".activity.ContinuousDownloadActivity" />
+        <activity android:name=".activity.eventbus.EventBusMainActivity" />
+        <activity android:name=".activity.eventbus.EventBusSecondActivity" />
+        <activity android:name=".activity.di.Dagger2ExampleActivity" />
+        <activity android:name=".activity.di.SecondActivity" />
+        <activity android:name=".activity.RecyclerViewExampleActivity" />
+        <activity android:name=".activity.ViewTestActivity" />
         <activity
             android:name=".activity.FragmentTabHostActivity"
-            android:theme="@style/_AppTheme">
-        </activity>
+            android:theme="@style/_AppTheme" />
         <activity android:name=".activity.WeatherActivity">
             <meta-data
                 android:name="android.app.searchable"
-                android:resource="@xml/searchable"/>
+                android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".activity.RecyclerMixViewActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.MergeExampleActivity">
-        </activity>
+        <activity android:name=".activity.RecyclerMixViewActivity" />
+        <activity android:name=".activity.rxjava.MergeExampleActivity" />
         <activity
             android:name=".activity.FragmentWithAnimActivity"
-            android:theme="@style/_AppTheme">
-        </activity>
-        <activity android:name=".activity.GestureDetectorActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.ErrorHandleActivity">
-        </activity>
-        <activity android:name=".activity.FabAndSnackbarActivity">
-        </activity>
-        <activity android:name=".activity.FabFollowsWidgetActivity">
-        </activity>
+            android:theme="@style/_AppTheme" />
+        <activity android:name=".activity.GestureDetectorActivity" />
+        <activity android:name=".activity.rxjava.ErrorHandleActivity" />
+        <activity android:name=".activity.FabAndSnackbarActivity" />
+        <activity android:name=".activity.FabFollowsWidgetActivity" />
         <activity
             android:name=".activity.CollapsingToolbarActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity android:name=".activity.RxPaginationActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaZipActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaConcatActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaDistinctActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaDistinctActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaFilterActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaBufferActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaTimerActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaIntervalActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaDoOnNextActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaSkipActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaTakeActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaSingleActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaDebounceActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaReduceActivity">
-        </activity>
-        <activity android:name=".activity.rxjava.RxJavaScanActivity">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.RxPaginationActivity" />
+        <activity android:name=".activity.rxjava.RxJavaZipActivity" />
+        <activity android:name=".activity.rxjava.RxJavaConcatActivity" />
+        <activity android:name=".activity.rxjava.RxJavaDistinctActivity" />
+        <activity android:name=".activity.rxjava.RxJavaDistinctActivity" />
+        <activity android:name=".activity.rxjava.RxJavaFilterActivity" />
+        <activity android:name=".activity.rxjava.RxJavaBufferActivity" />
+        <activity android:name=".activity.rxjava.RxJavaTimerActivity" />
+        <activity android:name=".activity.rxjava.RxJavaIntervalActivity" />
+        <activity android:name=".activity.rxjava.RxJavaDoOnNextActivity" />
+        <activity android:name=".activity.rxjava.RxJavaSkipActivity" />
+        <activity android:name=".activity.rxjava.RxJavaTakeActivity" />
+        <activity android:name=".activity.rxjava.RxJavaSingleActivity" />
+        <activity android:name=".activity.rxjava.RxJavaDebounceActivity" />
+        <activity android:name=".activity.rxjava.RxJavaReduceActivity" />
+        <activity android:name=".activity.rxjava.RxJavaScanActivity" />
         <activity
             android:name=".activity.CustomViewActivity"
-            android:theme="@style/_AppTheme">
-        </activity>
-        <activity android:name=".activity.customv.CustomViewExampleActivity">
-        </activity>
-        <activity android:name=".activity.LifecycleActivity">
-        </activity>
+            android:theme="@style/_AppTheme" />
+        <activity android:name=".activity.customv.CustomViewExampleActivity" />
+        <activity android:name=".activity.LifecycleActivity" />
 
         <!--  -->
-        <activity android:name=".activity.IntentServiceActivity">
-        </activity>
+        <activity android:name=".activity.IntentServiceActivity" />
 
         <service
             android:name=".service.MyIntentService"
-            android:exported="false">
-        </service>
+            android:exported="false" />
         <!--  -->
-        <activity android:name=".activity.MergeViewStubActivity">
-        </activity>
-        <activity android:name=".activity.BasicServiceActivity">
-        </activity>
+        <activity android:name=".activity.MergeViewStubActivity" />
+        <activity android:name=".activity.BasicServiceActivity" />
 
         <service
             android:name=".service.BasicService"
@@ -194,31 +129,38 @@
             android:exported="true"
             android:process=":remote">
             <intent-filter>
-                <action android:name="com.chiachen.portfolio.aidl.IMyAidlInterface"/>
+                <action android:name="com.chiachen.portfolio.aidl.IMyAidlInterface" />
             </intent-filter>
         </service>
 
-        <activity android:name=".activity.InteractServiceActivity">
-        </activity>
+        <activity android:name=".activity.InteractServiceActivity" />
 
         <service
             android:name=".service.DownloadService"
             android:enabled="true"
-            android:exported="true">
-        </service>
+            android:exported="true" />
 
         <activity
             android:name=".activity.FragmentHomeActivity"
-            android:theme="@style/_AppTheme">
-        </activity>
+            android:theme="@style/_AppTheme" />
         <activity
             android:name=".activity.ViewPagerActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar_">
-        </activity>
-
-        <activity android:name=".activity.TouchInterceptActivity">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar_" />
+        <activity android:name=".activity.TouchInterceptActivity" />
+        <activity android:name=".activity.rxjava.backpresure.BackpressureExampleActivity" />
+        <activity
+            android:name=".activity.coordinator.CoordinatorPracticeMainActivity"
+            android:theme="@style/AppTheme.NoActionBar_" />
+        <activity
+            android:name=".activity.coordinator.CoordinatorPractice1Activity"
+            android:theme="@style/AppTheme.NoActionBar_" />
+        <activity
+            android:name=".activity.coordinator.CoordinatorPractice2Activity"
+            android:theme="@style/AppTheme.NoActionBar_" />
+        <activity
+            android:name=".activity.coordinator.CoordinatorPractice3Activity"
+            android:theme="@style/AppTheme.NoActionBar_" />
     </application>
 
 </manifest>

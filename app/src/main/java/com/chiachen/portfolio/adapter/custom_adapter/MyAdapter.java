@@ -27,7 +27,6 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         this.mDatas = list;
     }
 
-
     public View getHeaderView() {
         return mHeaderView;
     }

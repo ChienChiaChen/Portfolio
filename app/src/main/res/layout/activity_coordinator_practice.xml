@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openCoordinator1"
+        android:text="CoordinatorLayout + AppBarLayout + Toolbar"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openCoordinator2"
+        android:text="CoordinatorLayout + AppBarLayout + CollapsingToolbarLayout + Toolbar"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openCoordinator3"
+        android:text="CoordinatorLayout + AppBarLayout + TabLayout + ViewPager"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        />
+</LinearLayout>
